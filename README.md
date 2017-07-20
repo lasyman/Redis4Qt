@@ -1,5 +1,5 @@
 # Redis for Qt framework
-***
+
 ### Redis 简介
 
 http://www.runoob.com/redis/redis-intro.html
@@ -15,7 +15,7 @@ http://www.runoob.com/redis/redis-data-types.html
 - 对key操作的接口都是以key_开头：如key_del、 key_exists
 - 对list操作的接口都是以list_开头：如list_lpop、 list_rpush
 - 以此类推
-具体的接口详见[Redis4Qt.h](class_redis4_qt.html "redis4qt.h#main-nav")文件
+具体的接口详见[Redis4Qt.h](https://lasyman.github.io/Redis4Qt/doc/html/class_redis4_qt.html)文件
 
 ### 暂不支持
 
