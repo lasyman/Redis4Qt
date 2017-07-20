@@ -1,0 +1,3703 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Redis4Qt: LHRedis类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="redis.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Redis4Qt
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">Redis API for Qt framework</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_l_h_redis-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">LHRedis类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 LHRedis 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_l_h_redis.png" usemap="#LHRedis_map" alt=""/>
+  <map id="LHRedis_map" name="LHRedis_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a37f631cd4ef4607dd643c2b4e0679eca"><td class="memItemLeft" align="right" valign="top"><a id="a37f631cd4ef4607dd643c2b4e0679eca"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>FuncType</b> { <br />
+&#160;&#160;<b>KEY_DEL</b> = 100, 
+<b>KEY_DUMP</b>, 
+<b>KEY_EXISTS</b>, 
+<b>KEY_EXPIRE</b>, 
+<br />
+&#160;&#160;<b>KEY_EXPIRE_AT</b>, 
+<b>KEYS</b>, 
+<b>KEY_PTTL</b>, 
+<b>KEY_TTL</b>, 
+<br />
+&#160;&#160;<b>KEY_RENAME</b>, 
+<b>KEY_TYPE</b>, 
+<b>STRING_SET</b> = 200, 
+<b>STRING_GET</b>, 
+<br />
+&#160;&#160;<b>STRING_GET_RANGE</b>, 
+<b>STRING_MGET</b>, 
+<b>STRING_MSET</b>, 
+<b>STRING_INCR</b>, 
+<br />
+&#160;&#160;<b>STRING_INCRBY</b>, 
+<b>STRING_DECR</b>, 
+<b>STRING_DECRBY</b>, 
+<b>STRING_APPEND</b>, 
+<br />
+&#160;&#160;<b>LIST_BLPOP</b> = 300, 
+<b>LIST_BRPOP</b>, 
+<b>LIST_BRPOPLPUSH</b>, 
+<b>LIST_INDEX</b>, 
+<br />
+&#160;&#160;<b>LIST_INSERT</b>, 
+<b>LIST_LEN</b>, 
+<b>LIST_LPOP</b>, 
+<b>LIST_LPUSH</b>, 
+<br />
+&#160;&#160;<b>LIST_LPUSHX</b>, 
+<b>LIST_RANGE</b>, 
+<b>LIST_REMOVE</b>, 
+<b>LIST_SET</b>, 
+<br />
+&#160;&#160;<b>LIST_TRIM</b>, 
+<b>LIST_RPOP</b>, 
+<b>LIST_RPOPLPUSH</b>, 
+<b>LIST_RPUSH</b>, 
+<br />
+&#160;&#160;<b>LIST_RPUSHX</b>, 
+<b>SET_ADD</b> = 400, 
+<b>SET_CARD</b>, 
+<b>SET_DIFF</b>, 
+<br />
+&#160;&#160;<b>SET_DIFFSTORE</b>, 
+<b>SET_INTER</b>, 
+<b>SET_INTERSTORE</b>, 
+<b>SET_ISMEMBER</b>, 
+<br />
+&#160;&#160;<b>SET_MEMBERS</b>, 
+<b>SET_MOVE</b>, 
+<b>SET_POP</b>, 
+<b>SET_RANDMEMBER</b>, 
+<br />
+&#160;&#160;<b>SET_REMOVE</b>, 
+<b>SET_UNION</b>, 
+<b>SET_UNIONSTORE</b>, 
+<b>HASH_DEL</b> = 500, 
+<br />
+&#160;&#160;<b>HASH_EXISTS</b>, 
+<b>HASH_GET</b>, 
+<b>HASH_GETALL</b>, 
+<b>HASH_INCRBY</b>, 
+<br />
+&#160;&#160;<b>HASH_INCRBYFLOAT</b>, 
+<b>HASH_KEYS</b>, 
+<b>HASH_LEN</b>, 
+<b>HASH_MGET</b>, 
+<br />
+&#160;&#160;<b>HASH_MSET</b>, 
+<b>HASH_SET</b>, 
+<b>HASH_SETNX</b>, 
+<b>HASH_VALUES</b>, 
+<br />
+&#160;&#160;<b>PUBLISH</b> = 600, 
+<b>SUBSCRIBE</b>, 
+<b>UNSUBSCRIBE</b>, 
+<b>PSUBSCRIBE</b>, 
+<br />
+&#160;&#160;<b>PUNSUBSCRIBE</b>
+<br />
+ }</td></tr>
+<tr class="separator:a37f631cd4ef4607dd643c2b4e0679eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a44f5bc73be78023ec3c9dbcb84b8c983"><td class="memItemLeft" align="right" valign="top"><a id="a44f5bc73be78023ec3c9dbcb84b8c983"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (const LHParameters &amp;Parameters)</td></tr>
+<tr class="separator:a44f5bc73be78023ec3c9dbcb84b8c983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4eae960456979fbbb33b484cde39231"><td class="memItemLeft" align="right" valign="top"><a id="aa4eae960456979fbbb33b484cde39231"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Uninit</b> ()</td></tr>
+<tr class="separator:aa4eae960456979fbbb33b484cde39231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482b1acfbde0acaad72d2cb7f0c450a3"><td class="memItemLeft" align="right" valign="top"><a id="a482b1acfbde0acaad72d2cb7f0c450a3"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>CreateInstance</b> (QVariant &amp;varInstance, const LHParameters &amp;Parameters)</td></tr>
+<tr class="separator:a482b1acfbde0acaad72d2cb7f0c450a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc969ca2676e762c84b16ed59e97d62"><td class="memItemLeft" align="right" valign="top"><a id="a4dc969ca2676e762c84b16ed59e97d62"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyInstance</b> (const QVariant &amp;varInstance)</td></tr>
+<tr class="separator:a4dc969ca2676e762c84b16ed59e97d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3dde4f390230947cdb69e0c0b2840a7"><td class="memItemLeft" align="right" valign="top"><a id="ad3dde4f390230947cdb69e0c0b2840a7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Upgrade</b> ()</td></tr>
+<tr class="separator:ad3dde4f390230947cdb69e0c0b2840a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065c75d356a4fd02a171f063dab938cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a065c75d356a4fd02a171f063dab938cb">key_del</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a065c75d356a4fd02a171f063dab938cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">该命令用于在 key 存在时删除 key  <a href="#a065c75d356a4fd02a171f063dab938cb">更多...</a><br /></td></tr>
+<tr class="separator:a065c75d356a4fd02a171f063dab938cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54519c15df777dde11fdfe98231705bf"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a54519c15df777dde11fdfe98231705bf">key_dump</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a54519c15df777dde11fdfe98231705bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列化给定 key ，并返回被序列化的值  <a href="#a54519c15df777dde11fdfe98231705bf">更多...</a><br /></td></tr>
+<tr class="separator:a54519c15df777dde11fdfe98231705bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ca41355f79af55a99237949f537569"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a83ca41355f79af55a99237949f537569">key_exists</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a83ca41355f79af55a99237949f537569"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查key是否存在  <a href="#a83ca41355f79af55a99237949f537569">更多...</a><br /></td></tr>
+<tr class="separator:a83ca41355f79af55a99237949f537569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad951625e0e2485053c382c81eaf2c596"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ad951625e0e2485053c382c81eaf2c596">key_expire</a> (QString key, int seconds, bool *error=NULL)</td></tr>
+<tr class="memdesc:ad951625e0e2485053c382c81eaf2c596"><td class="mdescLeft">&#160;</td><td class="mdescRight">为给定 key 设置过期时间（秒）  <a href="#ad951625e0e2485053c382c81eaf2c596">更多...</a><br /></td></tr>
+<tr class="separator:ad951625e0e2485053c382c81eaf2c596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add8e8c150ad970c621077f85958abeb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#add8e8c150ad970c621077f85958abeb9">key_expireat</a> (QString key, qint64 timestamp, bool *error=NULL)</td></tr>
+<tr class="memdesc:add8e8c150ad970c621077f85958abeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">和 EXPIRE 类似, 不同在于 EXPIREAT 命令接受的时间参数是 UNIX 时间戳(unix timestamp)  <a href="#add8e8c150ad970c621077f85958abeb9">更多...</a><br /></td></tr>
+<tr class="separator:add8e8c150ad970c621077f85958abeb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2195c4ea366cfa36b07b1c0b788c0a8c"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a2195c4ea366cfa36b07b1c0b788c0a8c">keys</a> (QString pattern, bool *error=NULL)</td></tr>
+<tr class="memdesc:a2195c4ea366cfa36b07b1c0b788c0a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找所有符合给定模式( pattern)的 key  <a href="#a2195c4ea366cfa36b07b1c0b788c0a8c">更多...</a><br /></td></tr>
+<tr class="separator:a2195c4ea366cfa36b07b1c0b788c0a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8cd8aef60cda0d2e3723d64ffd4ca2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#af8cd8aef60cda0d2e3723d64ffd4ca2f">key_pttl</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:af8cd8aef60cda0d2e3723d64ffd4ca2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">以毫秒为单位返回 key 的剩余的过期时间  <a href="#af8cd8aef60cda0d2e3723d64ffd4ca2f">更多...</a><br /></td></tr>
+<tr class="separator:af8cd8aef60cda0d2e3723d64ffd4ca2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9df4deb04a3df6f9b3c3508b593be0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a0e9df4deb04a3df6f9b3c3508b593be0">key_ttl</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a0e9df4deb04a3df6f9b3c3508b593be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">以秒为单位返回 key 的剩余的过期时间  <a href="#a0e9df4deb04a3df6f9b3c3508b593be0">更多...</a><br /></td></tr>
+<tr class="separator:a0e9df4deb04a3df6f9b3c3508b593be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd725e698e68d029df7b6ce9d22a466c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#afd725e698e68d029df7b6ce9d22a466c">key_rename</a> (QString key, QString newkey, bool *error=NULL)</td></tr>
+<tr class="memdesc:afd725e698e68d029df7b6ce9d22a466c"><td class="mdescLeft">&#160;</td><td class="mdescRight">修改 key 的名称  <a href="#afd725e698e68d029df7b6ce9d22a466c">更多...</a><br /></td></tr>
+<tr class="separator:afd725e698e68d029df7b6ce9d22a466c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea39bd6d5f09f0130ba05d3ba26d5c2"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#abea39bd6d5f09f0130ba05d3ba26d5c2">key_type</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:abea39bd6d5f09f0130ba05d3ba26d5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回 key 所储存的值的类型  <a href="#abea39bd6d5f09f0130ba05d3ba26d5c2">更多...</a><br /></td></tr>
+<tr class="separator:abea39bd6d5f09f0130ba05d3ba26d5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63b9891ecdaf00a80ed3bf3721e5b462"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a63b9891ecdaf00a80ed3bf3721e5b462">string_set</a> (QString key, QString value, bool *error=NULL)</td></tr>
+<tr class="memdesc:a63b9891ecdaf00a80ed3bf3721e5b462"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置指定 key 的值  <a href="#a63b9891ecdaf00a80ed3bf3721e5b462">更多...</a><br /></td></tr>
+<tr class="separator:a63b9891ecdaf00a80ed3bf3721e5b462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a2a5ab5705cb5f5387efaefeb939ad"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a00a2a5ab5705cb5f5387efaefeb939ad">string_get</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a00a2a5ab5705cb5f5387efaefeb939ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定 key 的值  <a href="#a00a2a5ab5705cb5f5387efaefeb939ad">更多...</a><br /></td></tr>
+<tr class="separator:a00a2a5ab5705cb5f5387efaefeb939ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5569c2e4fc0b29b7df510923d3c35cb"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ac5569c2e4fc0b29b7df510923d3c35cb">string_getrange</a> (QString key, int start, int stop, bool *error=NULL)</td></tr>
+<tr class="memdesc:ac5569c2e4fc0b29b7df510923d3c35cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回 key 中字符串值的子字符  <a href="#ac5569c2e4fc0b29b7df510923d3c35cb">更多...</a><br /></td></tr>
+<tr class="separator:ac5569c2e4fc0b29b7df510923d3c35cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de944b387542448fd0d9df0d38d12fd"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a1de944b387542448fd0d9df0d38d12fd">string_mget</a> (QStringList <a class="el" href="class_l_h_redis.html#a2195c4ea366cfa36b07b1c0b788c0a8c">keys</a>, bool *error=NULL)</td></tr>
+<tr class="memdesc:a1de944b387542448fd0d9df0d38d12fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所有(一个或多个)给定 key 的值  <a href="#a1de944b387542448fd0d9df0d38d12fd">更多...</a><br /></td></tr>
+<tr class="separator:a1de944b387542448fd0d9df0d38d12fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45356cbec78b37ab817411876ddbf465"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a45356cbec78b37ab817411876ddbf465">string_mset</a> (QMap&lt; QString, QVariant &gt; map, bool *error=NULL)</td></tr>
+<tr class="memdesc:a45356cbec78b37ab817411876ddbf465"><td class="mdescLeft">&#160;</td><td class="mdescRight">同时设置一个或多个 key-value 对  <a href="#a45356cbec78b37ab817411876ddbf465">更多...</a><br /></td></tr>
+<tr class="separator:a45356cbec78b37ab817411876ddbf465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b139ccad5cc5088db0771e2e7374c97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a3b139ccad5cc5088db0771e2e7374c97">string_incr</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a3b139ccad5cc5088db0771e2e7374c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 key 中储存的数字值增一  <a href="#a3b139ccad5cc5088db0771e2e7374c97">更多...</a><br /></td></tr>
+<tr class="separator:a3b139ccad5cc5088db0771e2e7374c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc9ec4bc4b8d07efaea4a89335efc04"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#accc9ec4bc4b8d07efaea4a89335efc04">string_incrby</a> (QString key, int interval, bool *error=NULL)</td></tr>
+<tr class="memdesc:accc9ec4bc4b8d07efaea4a89335efc04"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 key 所储存的值加上给定的增量值（increment）  <a href="#accc9ec4bc4b8d07efaea4a89335efc04">更多...</a><br /></td></tr>
+<tr class="separator:accc9ec4bc4b8d07efaea4a89335efc04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae0714f23828a78f57fc3fd6d09247a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#abae0714f23828a78f57fc3fd6d09247a">string_decr</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:abae0714f23828a78f57fc3fd6d09247a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 key 中储存的数字值减一  <a href="#abae0714f23828a78f57fc3fd6d09247a">更多...</a><br /></td></tr>
+<tr class="separator:abae0714f23828a78f57fc3fd6d09247a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d1981d565a7982da1b9bf67b5ec0e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a05d1981d565a7982da1b9bf67b5ec0e9">string_decrby</a> (QString key, int interval, bool *error=NULL)</td></tr>
+<tr class="memdesc:a05d1981d565a7982da1b9bf67b5ec0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">key 所储存的值减去给定的减量值（decrement）  <a href="#a05d1981d565a7982da1b9bf67b5ec0e9">更多...</a><br /></td></tr>
+<tr class="separator:a05d1981d565a7982da1b9bf67b5ec0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf3281717deb775e152734d289a5d8e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aaf3281717deb775e152734d289a5d8e6">string_append</a> (QString key, QString value, bool *error=NULL)</td></tr>
+<tr class="memdesc:aaf3281717deb775e152734d289a5d8e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">如果 key 已经存在并且是一个字符串， APPEND 命令将 value 追加到 key 原来的值的末尾; 不存在则设置key值为value  <a href="#aaf3281717deb775e152734d289a5d8e6">更多...</a><br /></td></tr>
+<tr class="separator:aaf3281717deb775e152734d289a5d8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0aa7136fca6558a96c94fb0a5928111"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aa0aa7136fca6558a96c94fb0a5928111">list_blpop</a> (QString key, int timeout, bool *error=NULL)</td></tr>
+<tr class="memdesc:aa0aa7136fca6558a96c94fb0a5928111"><td class="mdescLeft">&#160;</td><td class="mdescRight">移出并获取列表的第一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止  <a href="#aa0aa7136fca6558a96c94fb0a5928111">更多...</a><br /></td></tr>
+<tr class="separator:aa0aa7136fca6558a96c94fb0a5928111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536f5923c7100e9b4cd6c3341378c106"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a536f5923c7100e9b4cd6c3341378c106">list_brpop</a> (QString key, int timeout, bool *error=NULL)</td></tr>
+<tr class="memdesc:a536f5923c7100e9b4cd6c3341378c106"><td class="mdescLeft">&#160;</td><td class="mdescRight">移出并获取列表的最后一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止  <a href="#a536f5923c7100e9b4cd6c3341378c106">更多...</a><br /></td></tr>
+<tr class="separator:a536f5923c7100e9b4cd6c3341378c106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab264533fe55d6e52843e9346e967e0"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aaab264533fe55d6e52843e9346e967e0">list_brpoplpush</a> (QString source, QString destination, int timeout, bool *error=NULL)</td></tr>
+<tr class="memdesc:aaab264533fe55d6e52843e9346e967e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">从列表中弹出一个值，将弹出的元素插入到另外一个列表中并返回它； 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止  <a href="#aaab264533fe55d6e52843e9346e967e0">更多...</a><br /></td></tr>
+<tr class="separator:aaab264533fe55d6e52843e9346e967e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaad36ee0b4f452cd26f9da2db841d60"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aaaad36ee0b4f452cd26f9da2db841d60">list_index</a> (QString key, int index, bool *error=NULL)</td></tr>
+<tr class="memdesc:aaaad36ee0b4f452cd26f9da2db841d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过索引获取列表中的元素。你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推。  <a href="#aaaad36ee0b4f452cd26f9da2db841d60">更多...</a><br /></td></tr>
+<tr class="separator:aaaad36ee0b4f452cd26f9da2db841d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031557fc0be504c0013a8d24fe4b27ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a031557fc0be504c0013a8d24fe4b27ae">list_insert</a> (QString key, QString position, QString pivot, QString value, bool *error=NULL)</td></tr>
+<tr class="memdesc:a031557fc0be504c0013a8d24fe4b27ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">在列表的元素前或者后插入元素。 当指定元素不存在于列表中时，不执行任何操作。 当列表不存在时，被视为空列表，不执行任何操作。 如果 key 不是列表类型，返回一个错误。  <a href="#a031557fc0be504c0013a8d24fe4b27ae">更多...</a><br /></td></tr>
+<tr class="separator:a031557fc0be504c0013a8d24fe4b27ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154c42ef4b3f9051332fcf2c9cb26b70"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a154c42ef4b3f9051332fcf2c9cb26b70">list_len</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a154c42ef4b3f9051332fcf2c9cb26b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回获取列表长度（列表元素个数）。如果列表 key 不存在，则 key 被解释为一个空列表，返回 0 。 如果 key 不是列表类型，返回一个错误。  <a href="#a154c42ef4b3f9051332fcf2c9cb26b70">更多...</a><br /></td></tr>
+<tr class="separator:a154c42ef4b3f9051332fcf2c9cb26b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab40f73385d0c343ce292d3f6b5a10ba7"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ab40f73385d0c343ce292d3f6b5a10ba7">list_lpop</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:ab40f73385d0c343ce292d3f6b5a10ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">移出并获取列表的第一个元素  <a href="#ab40f73385d0c343ce292d3f6b5a10ba7">更多...</a><br /></td></tr>
+<tr class="separator:ab40f73385d0c343ce292d3f6b5a10ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b5a65d98bc1b82c383771324b72dbdf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a7b5a65d98bc1b82c383771324b72dbdf">list_lpush</a> (QString key, QString value, bool *error=NULL)</td></tr>
+<tr class="memdesc:a7b5a65d98bc1b82c383771324b72dbdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">将一个值插入到列表头部  <a href="#a7b5a65d98bc1b82c383771324b72dbdf">更多...</a><br /></td></tr>
+<tr class="separator:a7b5a65d98bc1b82c383771324b72dbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f337548982b8660e686c6696a348944"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a8f337548982b8660e686c6696a348944">list_lpush</a> (QString key, QStringList values, bool *error=NULL)</td></tr>
+<tr class="memdesc:a8f337548982b8660e686c6696a348944"><td class="mdescLeft">&#160;</td><td class="mdescRight">将多个值插入到列表头部  <a href="#a8f337548982b8660e686c6696a348944">更多...</a><br /></td></tr>
+<tr class="separator:a8f337548982b8660e686c6696a348944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a272cff26bdd760146a95521bbb1feecd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a272cff26bdd760146a95521bbb1feecd">list_lpushx</a> (QString key, QStringList values, bool *error=NULL)</td></tr>
+<tr class="memdesc:a272cff26bdd760146a95521bbb1feecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">将一个或多个值插入到已存在的列表头部，列表不存在时操作无效  <a href="#a272cff26bdd760146a95521bbb1feecd">更多...</a><br /></td></tr>
+<tr class="separator:a272cff26bdd760146a95521bbb1feecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99134a4bbd75be634883c22113fd138e"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a99134a4bbd75be634883c22113fd138e">list_range</a> (QString key, int start, int end, bool *error=NULL)</td></tr>
+<tr class="memdesc:a99134a4bbd75be634883c22113fd138e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redis Lrange 返回列表中指定区间内的元素，区间以偏移量 start 和 end 指定。 其中 0 表示列表的第一个元素， 1表示列表的第二个元素，以此类推。 你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推  <a href="#a99134a4bbd75be634883c22113fd138e">更多...</a><br /></td></tr>
+<tr class="separator:a99134a4bbd75be634883c22113fd138e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fcbae338191ae042863161370ae5079"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a1fcbae338191ae042863161370ae5079">list_rem</a> (QString key, int count, QString value, bool *error=NULL)</td></tr>
+<tr class="memdesc:a1fcbae338191ae042863161370ae5079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redis Lrem 根据参数 count 的值，移除列表中与参数 value 相等的元素 COUNT 的值可以是以下几种： count &gt; 0 : 从表头开始向表尾搜索，移除与 VALUE 相等的元素，数量为 COUNT count &lt; 0 : 从表尾开始向表头搜索，移除与 VALUE 相等的元素，数量为 COUNT 的绝对值 count = 0 : 移除表中所有与 VALUE 相等的值  <a href="#a1fcbae338191ae042863161370ae5079">更多...</a><br /></td></tr>
+<tr class="separator:a1fcbae338191ae042863161370ae5079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa818690baac91d45fcfb1cdfec28a46a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aa818690baac91d45fcfb1cdfec28a46a">list_set</a> (QString key, int index, QString value, bool *error=NULL)</td></tr>
+<tr class="memdesc:aa818690baac91d45fcfb1cdfec28a46a"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过索引来设置元素的值。 当索引参数超出范围，或对一个空列表进行 LSET 时，返回一个错误。  <a href="#aa818690baac91d45fcfb1cdfec28a46a">更多...</a><br /></td></tr>
+<tr class="separator:aa818690baac91d45fcfb1cdfec28a46a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8174e8640f00b80f679e73e28c94bdd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a8174e8640f00b80f679e73e28c94bdd1">list_trim</a> (QString key, int start, int stop, bool *error=NULL)</td></tr>
+<tr class="memdesc:a8174e8640f00b80f679e73e28c94bdd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">对一个列表进行修剪(trim)，就是说，让列表只保留指定区间内的元素，不在指定区间之内的元素都将被删除。 下标 0 表示列表的第一个元素，以 1 表示列表的第二个元素，以此类推。 你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推  <a href="#a8174e8640f00b80f679e73e28c94bdd1">更多...</a><br /></td></tr>
+<tr class="separator:a8174e8640f00b80f679e73e28c94bdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d5ec69ebe8977b9c305e2143ca32ae"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a02d5ec69ebe8977b9c305e2143ca32ae">list_rpop</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a02d5ec69ebe8977b9c305e2143ca32ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除并返回列表的最后一个元素  <a href="#a02d5ec69ebe8977b9c305e2143ca32ae">更多...</a><br /></td></tr>
+<tr class="separator:a02d5ec69ebe8977b9c305e2143ca32ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cbfc4dab23c238ad0229dd2ffca882f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a0cbfc4dab23c238ad0229dd2ffca882f">list_rpoplpush</a> (QString source, QString destination, bool *error=NULL)</td></tr>
+<tr class="memdesc:a0cbfc4dab23c238ad0229dd2ffca882f"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除列表的最后一个元素，并将该元素添加到另一个列表并返回  <a href="#a0cbfc4dab23c238ad0229dd2ffca882f">更多...</a><br /></td></tr>
+<tr class="separator:a0cbfc4dab23c238ad0229dd2ffca882f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc62ce73668c1f2605afaa516d3bc48a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#abc62ce73668c1f2605afaa516d3bc48a">list_rpush</a> (QString key, QString value, bool *error=NULL)</td></tr>
+<tr class="memdesc:abc62ce73668c1f2605afaa516d3bc48a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将一个值插入到列表的尾部(最右边)。如果列表不存在，一个空列表会被创建并执行 RPUSH 操作。 当列表存在但不是列表类型时，返回一个错误  <a href="#abc62ce73668c1f2605afaa516d3bc48a">更多...</a><br /></td></tr>
+<tr class="separator:abc62ce73668c1f2605afaa516d3bc48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e2c7d073ac91c96479fae3a2ef4d5c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a2e2c7d073ac91c96479fae3a2ef4d5c8">list_rpush</a> (QString key, QStringList values, bool *error=NULL)</td></tr>
+<tr class="memdesc:a2e2c7d073ac91c96479fae3a2ef4d5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">将多个值插入到列表的尾部(最右边)。如果列表不存在，一个空列表会被创建并执行 RPUSH 操作。 当列表存在但不是列表类型时，返回一个错误  <a href="#a2e2c7d073ac91c96479fae3a2ef4d5c8">更多...</a><br /></td></tr>
+<tr class="separator:a2e2c7d073ac91c96479fae3a2ef4d5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a16632dd2e247191b8fe6e2c79047d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ae1a16632dd2e247191b8fe6e2c79047d">list_rpushx</a> (QString key, QStringList values, bool *error=NULL)</td></tr>
+<tr class="memdesc:ae1a16632dd2e247191b8fe6e2c79047d"><td class="mdescLeft">&#160;</td><td class="mdescRight">将一个或多个值插入到已存在的列表尾部(最右边)。如果列表不存在，操作无效  <a href="#ae1a16632dd2e247191b8fe6e2c79047d">更多...</a><br /></td></tr>
+<tr class="separator:ae1a16632dd2e247191b8fe6e2c79047d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19b27a9e0578135e113f50ef0020107"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ad19b27a9e0578135e113f50ef0020107">set_add</a> (QString key, QString member, bool *error=NULL)</td></tr>
+<tr class="memdesc:ad19b27a9e0578135e113f50ef0020107"><td class="mdescLeft">&#160;</td><td class="mdescRight">将一个成员元素加入到集合中，已经存在于集合的成员元素将被忽略。 假如集合 key 不存在，则创建一个只包含添加的元素作成员的集合。 当集合 key 不是集合类型时，返回一个错误。  <a href="#ad19b27a9e0578135e113f50ef0020107">更多...</a><br /></td></tr>
+<tr class="separator:ad19b27a9e0578135e113f50ef0020107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f18d456845ce5d8bc54b10962a927e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a76f18d456845ce5d8bc54b10962a927e">set_add</a> (QString key, QStringList members, bool *error=NULL)</td></tr>
+<tr class="memdesc:a76f18d456845ce5d8bc54b10962a927e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将多个成员元素加入到集合中，已经存在于集合的成员元素将被忽略。 假如集合 key 不存在，则创建一个只包含添加的元素作成员的集合。 当集合 key 不是集合类型时，返回一个错误。  <a href="#a76f18d456845ce5d8bc54b10962a927e">更多...</a><br /></td></tr>
+<tr class="separator:a76f18d456845ce5d8bc54b10962a927e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa304fa7d42ee63b40825d42f77ce2c67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aa304fa7d42ee63b40825d42f77ce2c67">set_card</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:aa304fa7d42ee63b40825d42f77ce2c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回集合中元素的数量  <a href="#aa304fa7d42ee63b40825d42f77ce2c67">更多...</a><br /></td></tr>
+<tr class="separator:aa304fa7d42ee63b40825d42f77ce2c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084553a6093b18ea6f76fab2a1425009"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a084553a6093b18ea6f76fab2a1425009">set_diff</a> (QStringList <a class="el" href="class_l_h_redis.html#a2195c4ea366cfa36b07b1c0b788c0a8c">keys</a>, bool *error=NULL)</td></tr>
+<tr class="memdesc:a084553a6093b18ea6f76fab2a1425009"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回给定集合之间的差集。不存在的集合 key 将视为空集  <a href="#a084553a6093b18ea6f76fab2a1425009">更多...</a><br /></td></tr>
+<tr class="separator:a084553a6093b18ea6f76fab2a1425009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9fda58bd063bec3af52ed35d7aa36e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ab9fda58bd063bec3af52ed35d7aa36e5">set_diffstore</a> (QString destination, QStringList <a class="el" href="class_l_h_redis.html#a2195c4ea366cfa36b07b1c0b788c0a8c">keys</a>, bool *error=NULL)</td></tr>
+<tr class="memdesc:ab9fda58bd063bec3af52ed35d7aa36e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">将给定集合之间的差集存储在指定的集合中。如果指定的集合 key 已存在，则会被覆盖  <a href="#ab9fda58bd063bec3af52ed35d7aa36e5">更多...</a><br /></td></tr>
+<tr class="separator:ab9fda58bd063bec3af52ed35d7aa36e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b168a6bffdb0e794cadc23a5e03ad13"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a3b168a6bffdb0e794cadc23a5e03ad13">set_inter</a> (QStringList <a class="el" href="class_l_h_redis.html#a2195c4ea366cfa36b07b1c0b788c0a8c">keys</a>, bool *error=NULL)</td></tr>
+<tr class="memdesc:a3b168a6bffdb0e794cadc23a5e03ad13"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回给定所有给定集合的交集。不存在的集合 key 被视为空集。 当给定集合当中有一个空集时，结果也为空集(根据集合运算定律)  <a href="#a3b168a6bffdb0e794cadc23a5e03ad13">更多...</a><br /></td></tr>
+<tr class="separator:a3b168a6bffdb0e794cadc23a5e03ad13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b55a2aa2f24c527bce3912a4683f99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ab2b55a2aa2f24c527bce3912a4683f99">set_interstore</a> (QString destination, QStringList <a class="el" href="class_l_h_redis.html#a2195c4ea366cfa36b07b1c0b788c0a8c">keys</a>, bool *error=NULL)</td></tr>
+<tr class="memdesc:ab2b55a2aa2f24c527bce3912a4683f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">将给定集合之间的交集存储在指定的集合中。如果指定的集合已经存在，则将其覆盖  <a href="#ab2b55a2aa2f24c527bce3912a4683f99">更多...</a><br /></td></tr>
+<tr class="separator:ab2b55a2aa2f24c527bce3912a4683f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e10043b7db13e5602dc3a565852f81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ab2e10043b7db13e5602dc3a565852f81">set_ismember</a> (QString key, QString member, bool *error=NULL)</td></tr>
+<tr class="memdesc:ab2e10043b7db13e5602dc3a565852f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断成员元素是否是集合的成员  <a href="#ab2e10043b7db13e5602dc3a565852f81">更多...</a><br /></td></tr>
+<tr class="separator:ab2e10043b7db13e5602dc3a565852f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a383eb7f65e79ed45a802f1caa6650c96"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a383eb7f65e79ed45a802f1caa6650c96">set_members</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a383eb7f65e79ed45a802f1caa6650c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回集合中的所有的成员。 不存在的集合 key 被视为空集合  <a href="#a383eb7f65e79ed45a802f1caa6650c96">更多...</a><br /></td></tr>
+<tr class="separator:a383eb7f65e79ed45a802f1caa6650c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dfddf33e0abe95bc1f9486e507b1f94"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a6dfddf33e0abe95bc1f9486e507b1f94">set_move</a> (QString source, QString destination, QString member, bool *error=NULL)</td></tr>
+<tr class="memdesc:a6dfddf33e0abe95bc1f9486e507b1f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">将指定成员 member 元素从 source 集合移动到 destination 集合。 SMOVE 是原子性操作。 如果 source 集合不存在或不包含指定的 member 元素，则 SMOVE 命令不执行任何操作，仅返回 0 。否则， member 元素从 source 集合中被移除，并添加到 destination 集合中去。 当 destination 集合已经包含 member 元素时， SMOVE 命令只是简单地将 source 集合中的 member 元素删除。 当 source 或 destination 不是集合类型时，返回一个错误。  <a href="#a6dfddf33e0abe95bc1f9486e507b1f94">更多...</a><br /></td></tr>
+<tr class="separator:a6dfddf33e0abe95bc1f9486e507b1f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a481a5d7521397ec00fe706ba796303bb"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a481a5d7521397ec00fe706ba796303bb">set_pop</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a481a5d7521397ec00fe706ba796303bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除并返回集合中的一个随机元素  <a href="#a481a5d7521397ec00fe706ba796303bb">更多...</a><br /></td></tr>
+<tr class="separator:a481a5d7521397ec00fe706ba796303bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1b74f32c38b7e75f2722cfaab425ea"><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a3a1b74f32c38b7e75f2722cfaab425ea">set_randmember</a> (QString key, bool *error=NULL)=0</td></tr>
+<tr class="memdesc:a3a1b74f32c38b7e75f2722cfaab425ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回集合中的一个随机元素。 该操作和 SPOP 相似，但 SPOP 将随机元素从集合中移除并返回，而 Srandmember 则仅仅返回随机元素，而不对集合进行任何改动。  <a href="#a3a1b74f32c38b7e75f2722cfaab425ea">更多...</a><br /></td></tr>
+<tr class="separator:a3a1b74f32c38b7e75f2722cfaab425ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4547f0e1820d684ca58db185117b5f1"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ad4547f0e1820d684ca58db185117b5f1">set_randmember</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:ad4547f0e1820d684ca58db185117b5f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回集合中的一个随机元素。 从 Redis 2.6 版本开始， Srandmember 命令接受可选的 count 参数： 如果 count 为正数，且小于集合基数，那么命令返回一个包含 count 个元素的数组，数组中的元素各不相同。如果 count 大于等于集合基数，那么返回整个集合。 如果 count 为负数，那么命令返回一个数组，数组中的元素可能会重复出现多次，而数组的长度为 count 的绝对值。 该操作和 SPOP 相似，但 SPOP 将随机元素从集合中移除并返回，而 Srandmember 则仅仅返回随机元素，而不对集合进行任何改动。  <a href="#ad4547f0e1820d684ca58db185117b5f1">更多...</a><br /></td></tr>
+<tr class="separator:ad4547f0e1820d684ca58db185117b5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa700a5b5b3fdb72b097403d8477916a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aa700a5b5b3fdb72b097403d8477916a4">set_rem</a> (QString key, QString member, bool *error=NULL)</td></tr>
+<tr class="memdesc:aa700a5b5b3fdb72b097403d8477916a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除集合中的一个成员元素，不存在的成员元素会被忽略。当 key 不是集合类型，返回一个错误  <a href="#aa700a5b5b3fdb72b097403d8477916a4">更多...</a><br /></td></tr>
+<tr class="separator:aa700a5b5b3fdb72b097403d8477916a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb269511da6e5d5f19a8caa7d27485e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#acb269511da6e5d5f19a8caa7d27485e2">set_rem</a> (QString key, QStringList members, bool *error=NULL)</td></tr>
+<tr class="memdesc:acb269511da6e5d5f19a8caa7d27485e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除集合中的多个成员元素，不存在的成员元素会被忽略。当 key 不是集合类型，返回一个错误  <a href="#acb269511da6e5d5f19a8caa7d27485e2">更多...</a><br /></td></tr>
+<tr class="separator:acb269511da6e5d5f19a8caa7d27485e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedfe3d74fdab6720ba5b143b2c1b8da7"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aedfe3d74fdab6720ba5b143b2c1b8da7">set_union</a> (QStringList <a class="el" href="class_l_h_redis.html#a2195c4ea366cfa36b07b1c0b788c0a8c">keys</a>, bool *error=NULL)</td></tr>
+<tr class="memdesc:aedfe3d74fdab6720ba5b143b2c1b8da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回给定集合的并集。不存在的集合 key 被视为空集  <a href="#aedfe3d74fdab6720ba5b143b2c1b8da7">更多...</a><br /></td></tr>
+<tr class="separator:aedfe3d74fdab6720ba5b143b2c1b8da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee2cdf830096548a181d43929ed48f5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aee2cdf830096548a181d43929ed48f5a">set_unionstore</a> (QString destination, QStringList <a class="el" href="class_l_h_redis.html#a2195c4ea366cfa36b07b1c0b788c0a8c">keys</a>, bool *error=NULL)</td></tr>
+<tr class="memdesc:aee2cdf830096548a181d43929ed48f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将给定集合的并集存储在指定的集合 destination 中。如果 destination 已经存在，则将其覆盖  <a href="#aee2cdf830096548a181d43929ed48f5a">更多...</a><br /></td></tr>
+<tr class="separator:aee2cdf830096548a181d43929ed48f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c37fdb0c45a8ee317eba2e3affe69fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a6c37fdb0c45a8ee317eba2e3affe69fb">hash_del</a> (QString key, QString field, bool *error=NULL)</td></tr>
+<tr class="memdesc:a6c37fdb0c45a8ee317eba2e3affe69fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除哈希表 key 中的一个指定字段，不存在的字段将被忽略  <a href="#a6c37fdb0c45a8ee317eba2e3affe69fb">更多...</a><br /></td></tr>
+<tr class="separator:a6c37fdb0c45a8ee317eba2e3affe69fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0118b1a2c6c1a417c7c4924921d5613c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a0118b1a2c6c1a417c7c4924921d5613c">hash_del</a> (QString key, QStringList fields, bool *error=NULL)</td></tr>
+<tr class="memdesc:a0118b1a2c6c1a417c7c4924921d5613c"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除哈希表 key 中的多个指定字段，不存在的字段将被忽略  <a href="#a0118b1a2c6c1a417c7c4924921d5613c">更多...</a><br /></td></tr>
+<tr class="separator:a0118b1a2c6c1a417c7c4924921d5613c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33cb1ddfd27070a5601e52e7bf2153b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a33cb1ddfd27070a5601e52e7bf2153b8">hash_exists</a> (QString key, QString field, bool *error=NULL)</td></tr>
+<tr class="memdesc:a33cb1ddfd27070a5601e52e7bf2153b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">查看哈希表的指定字段是否存在  <a href="#a33cb1ddfd27070a5601e52e7bf2153b8">更多...</a><br /></td></tr>
+<tr class="separator:a33cb1ddfd27070a5601e52e7bf2153b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381e4cfa30ef665131149c42e8379f28"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a381e4cfa30ef665131149c42e8379f28">hash_get</a> (QString key, QString field, bool *error=NULL)</td></tr>
+<tr class="memdesc:a381e4cfa30ef665131149c42e8379f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回哈希表中指定字段的值  <a href="#a381e4cfa30ef665131149c42e8379f28">更多...</a><br /></td></tr>
+<tr class="separator:a381e4cfa30ef665131149c42e8379f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4657d02f44c3fe246e4a6ab795c5752e"><td class="memItemLeft" align="right" valign="top">QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a4657d02f44c3fe246e4a6ab795c5752e">hash_getall</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a4657d02f44c3fe246e4a6ab795c5752e"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回哈希表中，所有的字段和值。在返回值里，紧跟每个字段名(field name)之后是字段的值(value)，所以返回值的长度是哈希表大小的两倍  <a href="#a4657d02f44c3fe246e4a6ab795c5752e">更多...</a><br /></td></tr>
+<tr class="separator:a4657d02f44c3fe246e4a6ab795c5752e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60cdd75167bc8124f3052d1caadc432"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ab60cdd75167bc8124f3052d1caadc432">hash_incrby</a> (QString key, QString field, int increment, bool *error=NULL)</td></tr>
+<tr class="memdesc:ab60cdd75167bc8124f3052d1caadc432"><td class="mdescLeft">&#160;</td><td class="mdescRight">为哈希表中的字段值加上指定增量值。 增量也可以为负数，相当于对指定字段进行减法操作。 如果哈希表的 key 不存在，一个新的哈希表被创建并执行 HINCRBY 命令。 如果指定的字段不存在，那么在执行命令前，字段的值被初始化为 0 。 对一个储存字符串值的字段执行 HINCRBY 命令将造成一个错误。 本操作的值被限制在 64 位(bit)有符号数字表示之内。  <a href="#ab60cdd75167bc8124f3052d1caadc432">更多...</a><br /></td></tr>
+<tr class="separator:ab60cdd75167bc8124f3052d1caadc432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b8f9e2dd91647d9ca3a600647c6f97"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#af2b8f9e2dd91647d9ca3a600647c6f97">hash_incrbyfloat</a> (QString key, QString field, float increment, bool *error=NULL)</td></tr>
+<tr class="memdesc:af2b8f9e2dd91647d9ca3a600647c6f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">为哈希表中的字段值加上指定浮点数增量值。如果指定的字段不存在，那么在执行命令前，字段的值被初始化为0  <a href="#af2b8f9e2dd91647d9ca3a600647c6f97">更多...</a><br /></td></tr>
+<tr class="separator:af2b8f9e2dd91647d9ca3a600647c6f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3faa1d475a58964c63937084e92853b3"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a3faa1d475a58964c63937084e92853b3">hash_keys</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a3faa1d475a58964c63937084e92853b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取哈希表中的所有字段名  <a href="#a3faa1d475a58964c63937084e92853b3">更多...</a><br /></td></tr>
+<tr class="separator:a3faa1d475a58964c63937084e92853b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b35e60b26153e29abb03f65d93a2650"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a2b35e60b26153e29abb03f65d93a2650">hash_len</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a2b35e60b26153e29abb03f65d93a2650"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取哈希表中字段的数量  <a href="#a2b35e60b26153e29abb03f65d93a2650">更多...</a><br /></td></tr>
+<tr class="separator:a2b35e60b26153e29abb03f65d93a2650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07199d5a0dd62be9adaebd05dba7a666"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a07199d5a0dd62be9adaebd05dba7a666">hash_mget</a> (QString key, QStringList fields, bool *error=NULL)</td></tr>
+<tr class="memdesc:a07199d5a0dd62be9adaebd05dba7a666"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回哈希表中，一个或多个给定字段的值。如果指定的字段不存在于哈希表，那么返回一个 nil 值  <a href="#a07199d5a0dd62be9adaebd05dba7a666">更多...</a><br /></td></tr>
+<tr class="separator:a07199d5a0dd62be9adaebd05dba7a666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8984f5b1e76bb218cc762615eeba54b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a8984f5b1e76bb218cc762615eeba54b1">hash_mset</a> (QString key, QMap&lt; QString, QVariant &gt; map, bool *error=NULL)</td></tr>
+<tr class="memdesc:a8984f5b1e76bb218cc762615eeba54b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">同时将多个 field-value (字段-值)对设置到哈希表中。此命令会覆盖哈希表中已存在的字段。如果哈希表不存在，会创建一个空哈希表，并执行 HMSET 操作  <a href="#a8984f5b1e76bb218cc762615eeba54b1">更多...</a><br /></td></tr>
+<tr class="separator:a8984f5b1e76bb218cc762615eeba54b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2c6f352e238033be5e8c420de082982"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ac2c6f352e238033be5e8c420de082982">hash_set</a> (QString key, QString field, QString value, bool *error=NULL)</td></tr>
+<tr class="memdesc:ac2c6f352e238033be5e8c420de082982"><td class="mdescLeft">&#160;</td><td class="mdescRight">为哈希表中的字段赋值。如果哈希表不存在，一个新的哈希表被创建并进行 HSET 操作。如果字段已经存在于哈希表中，旧值将被覆盖  <a href="#ac2c6f352e238033be5e8c420de082982">更多...</a><br /></td></tr>
+<tr class="separator:ac2c6f352e238033be5e8c420de082982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac7f2b1cf97fd337e9667d0c23661538"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aac7f2b1cf97fd337e9667d0c23661538">hash_setnx</a> (QString key, QString field, QString value, bool *error=NULL)</td></tr>
+<tr class="memdesc:aac7f2b1cf97fd337e9667d0c23661538"><td class="mdescLeft">&#160;</td><td class="mdescRight">为哈希表中不存在的的字段赋值。 如果哈希表不存在，一个新的哈希表被创建并进行 HSET 操作。 如果字段已经存在于哈希表中，操作无效。 如果 key 不存在，一个新哈希表被创建并执行 HSETNX 命令。  <a href="#aac7f2b1cf97fd337e9667d0c23661538">更多...</a><br /></td></tr>
+<tr class="separator:aac7f2b1cf97fd337e9667d0c23661538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064aad716969cd35e09e78f04d4ea2d9"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a064aad716969cd35e09e78f04d4ea2d9">hash_values</a> (QString key, bool *error=NULL)</td></tr>
+<tr class="memdesc:a064aad716969cd35e09e78f04d4ea2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回哈希表所有字段的值  <a href="#a064aad716969cd35e09e78f04d4ea2d9">更多...</a><br /></td></tr>
+<tr class="separator:a064aad716969cd35e09e78f04d4ea2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80bca16f4622309a7f0cf67179cd0c02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a80bca16f4622309a7f0cf67179cd0c02">publish</a> (QString channel, QString message, bool *error=NULL)</td></tr>
+<tr class="memdesc:a80bca16f4622309a7f0cf67179cd0c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">将信息发送到指定的频道  <a href="#a80bca16f4622309a7f0cf67179cd0c02">更多...</a><br /></td></tr>
+<tr class="separator:a80bca16f4622309a7f0cf67179cd0c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc606671df27e7c3b028d627ac43d792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#adc606671df27e7c3b028d627ac43d792">subscribe</a> (QString channel, bool *error=NULL)</td></tr>
+<tr class="memdesc:adc606671df27e7c3b028d627ac43d792"><td class="mdescLeft">&#160;</td><td class="mdescRight">订阅给定的一个或多个频道的信息  <a href="#adc606671df27e7c3b028d627ac43d792">更多...</a><br /></td></tr>
+<tr class="separator:adc606671df27e7c3b028d627ac43d792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad47a9b2483fe0c669fa53faf12a784ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#ad47a9b2483fe0c669fa53faf12a784ca">unsubscribe</a> (QString channel, bool *error=NULL)</td></tr>
+<tr class="memdesc:ad47a9b2483fe0c669fa53faf12a784ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">退订给定的一个或多个频道的信息  <a href="#ad47a9b2483fe0c669fa53faf12a784ca">更多...</a><br /></td></tr>
+<tr class="separator:ad47a9b2483fe0c669fa53faf12a784ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e74074d7c5da936bc930145e37d8cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a78e74074d7c5da936bc930145e37d8cd">psubscribe</a> (QString channel, bool *error=NULL)</td></tr>
+<tr class="memdesc:a78e74074d7c5da936bc930145e37d8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">订阅一个或多个符合给定模式的频道。每个模式以 * 作为匹配符，比如 it* 匹配所有以 it 开头的频道( it.news 、 it.blog 、 it.tweets 等等)。 news.* 匹配所有以 news. 开头的频道( news.it 、 news.global.today 等等)，诸如此类。  <a href="#a78e74074d7c5da936bc930145e37d8cd">更多...</a><br /></td></tr>
+<tr class="separator:a78e74074d7c5da936bc930145e37d8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef826e5865da163d3143f68f8188721b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#aef826e5865da163d3143f68f8188721b">punsubscribe</a> (QString channel, bool *error=NULL)</td></tr>
+<tr class="memdesc:aef826e5865da163d3143f68f8188721b"><td class="mdescLeft">&#160;</td><td class="mdescRight">退订所有给定模式的频道  <a href="#aef826e5865da163d3143f68f8188721b">更多...</a><br /></td></tr>
+<tr class="separator:aef826e5865da163d3143f68f8188721b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60316aba996046d46c94c16d43c41488"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_h_redis.html#a60316aba996046d46c94c16d43c41488">getLastError</a> ()</td></tr>
+<tr class="memdesc:a60316aba996046d46c94c16d43c41488"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用接口发生错误时，获取错误类型  <a href="#a60316aba996046d46c94c16d43c41488">更多...</a><br /></td></tr>
+<tr class="separator:a60316aba996046d46c94c16d43c41488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a60316aba996046d46c94c16d43c41488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60316aba996046d46c94c16d43c41488">&#9670;&nbsp;</a></span>getLastError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::getLastError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>调用接口发生错误时，获取错误类型 </p>
+<dl class="section return"><dt>返回</dt><dd>错误类型，定义在lht_errors.h文件中 </dd></dl>
+
+</div>
+</div>
+<a id="a6c37fdb0c45a8ee317eba2e3affe69fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c37fdb0c45a8ee317eba2e3affe69fb">&#9670;&nbsp;</a></span>hash_del() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::hash_del </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除哈希表 key 中的一个指定字段，不存在的字段将被忽略 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">field</td><td>指定字段 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回成功删除的元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="a0118b1a2c6c1a417c7c4924921d5613c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0118b1a2c6c1a417c7c4924921d5613c">&#9670;&nbsp;</a></span>hash_del() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::hash_del </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>fields</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除哈希表 key 中的多个指定字段，不存在的字段将被忽略 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">fields</td><td>指定字段列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回成功删除的元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="a33cb1ddfd27070a5601e52e7bf2153b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33cb1ddfd27070a5601e52e7bf2153b8">&#9670;&nbsp;</a></span>hash_exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::hash_exists </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查看哈希表的指定字段是否存在 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">field</td><td>指定字段 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>存在则返回true，不存在返回false </dd></dl>
+
+</div>
+</div>
+<a id="a381e4cfa30ef665131149c42e8379f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a381e4cfa30ef665131149c42e8379f28">&#9670;&nbsp;</a></span>hash_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LHRedis::hash_get </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回哈希表中指定字段的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">field</td><td>指定字段 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回指定字段的元素值，不存在则返回NULL </dd></dl>
+
+</div>
+</div>
+<a id="a4657d02f44c3fe246e4a6ab795c5752e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4657d02f44c3fe246e4a6ab795c5752e">&#9670;&nbsp;</a></span>hash_getall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariantMap LHRedis::hash_getall </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回哈希表中，所有的字段和值。在返回值里，紧跟每个字段名(field name)之后是字段的值(value)，所以返回值的长度是哈希表大小的两倍 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回字段和元素的键值对 </dd></dl>
+
+</div>
+</div>
+<a id="ab60cdd75167bc8124f3052d1caadc432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60cdd75167bc8124f3052d1caadc432">&#9670;&nbsp;</a></span>hash_incrby()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::hash_incrby </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>increment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为哈希表中的字段值加上指定增量值。 增量也可以为负数，相当于对指定字段进行减法操作。 如果哈希表的 key 不存在，一个新的哈希表被创建并执行 HINCRBY 命令。 如果指定的字段不存在，那么在执行命令前，字段的值被初始化为 0 。 对一个储存字符串值的字段执行 HINCRBY 命令将造成一个错误。 本操作的值被限制在 64 位(bit)有符号数字表示之内。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">field</td><td>指定字段 </td></tr>
+    <tr><td class="paramname">increment</td><td>增量（整型） </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>增加后的当前元素值 </dd></dl>
+
+</div>
+</div>
+<a id="af2b8f9e2dd91647d9ca3a600647c6f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b8f9e2dd91647d9ca3a600647c6f97">&#9670;&nbsp;</a></span>hash_incrbyfloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LHRedis::hash_incrbyfloat </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>increment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为哈希表中的字段值加上指定浮点数增量值。如果指定的字段不存在，那么在执行命令前，字段的值被初始化为0 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">field</td><td>指定字段 </td></tr>
+    <tr><td class="paramname">increment</td><td>增量（浮点型） </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>增加后的当前元素值 </dd></dl>
+
+</div>
+</div>
+<a id="a3faa1d475a58964c63937084e92853b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3faa1d475a58964c63937084e92853b3">&#9670;&nbsp;</a></span>hash_keys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::hash_keys </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取哈希表中的所有字段名 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回所有的字段列表 </dd></dl>
+
+</div>
+</div>
+<a id="a2b35e60b26153e29abb03f65d93a2650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b35e60b26153e29abb03f65d93a2650">&#9670;&nbsp;</a></span>hash_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::hash_len </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取哈希表中字段的数量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回字段个数 </dd></dl>
+
+</div>
+</div>
+<a id="a07199d5a0dd62be9adaebd05dba7a666"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07199d5a0dd62be9adaebd05dba7a666">&#9670;&nbsp;</a></span>hash_mget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::hash_mget </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>fields</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回哈希表中，一个或多个给定字段的值。如果指定的字段不存在于哈希表，那么返回一个 nil 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">fields</td><td>指定的字段列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回字段列表对应的元素列表 </dd></dl>
+
+</div>
+</div>
+<a id="a8984f5b1e76bb218cc762615eeba54b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8984f5b1e76bb218cc762615eeba54b1">&#9670;&nbsp;</a></span>hash_mset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::hash_mset </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QMap&lt; QString, QVariant &gt;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>同时将多个 field-value (字段-值)对设置到哈希表中。此命令会覆盖哈希表中已存在的字段。如果哈希表不存在，会创建一个空哈希表，并执行 HMSET 操作 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">map</td><td>字段-元素键值对 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true，失败返回false </dd></dl>
+
+</div>
+</div>
+<a id="ac2c6f352e238033be5e8c420de082982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2c6f352e238033be5e8c420de082982">&#9670;&nbsp;</a></span>hash_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::hash_set </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为哈希表中的字段赋值。如果哈希表不存在，一个新的哈希表被创建并进行 HSET 操作。如果字段已经存在于哈希表中，旧值将被覆盖 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">field</td><td>字段名 </td></tr>
+    <tr><td class="paramname">value</td><td>字段对应的元素 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>新增则返回true，否则返回false </dd></dl>
+
+</div>
+</div>
+<a id="aac7f2b1cf97fd337e9667d0c23661538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac7f2b1cf97fd337e9667d0c23661538">&#9670;&nbsp;</a></span>hash_setnx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::hash_setnx </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为哈希表中不存在的的字段赋值。 如果哈希表不存在，一个新的哈希表被创建并进行 HSET 操作。 如果字段已经存在于哈希表中，操作无效。 如果 key 不存在，一个新哈希表被创建并执行 HSETNX 命令。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">field</td><td>字段名 </td></tr>
+    <tr><td class="paramname">value</td><td>字段对应的元素 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>新增则返回true，否则返回false </dd></dl>
+
+</div>
+</div>
+<a id="a064aad716969cd35e09e78f04d4ea2d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064aad716969cd35e09e78f04d4ea2d9">&#9670;&nbsp;</a></span>hash_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::hash_values </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回哈希表所有字段的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回所有的元素列表 </dd></dl>
+
+</div>
+</div>
+<a id="a065c75d356a4fd02a171f063dab938cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a065c75d356a4fd02a171f063dab938cb">&#9670;&nbsp;</a></span>key_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::key_del </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>该命令用于在 key 存在时删除 key </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>删除成功返回已删除个数 </dd></dl>
+
+</div>
+</div>
+<a id="a54519c15df777dde11fdfe98231705bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54519c15df777dde11fdfe98231705bf">&#9670;&nbsp;</a></span>key_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LHRedis::key_dump </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>序列化给定 key ，并返回被序列化的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>序列化后的值 </dd></dl>
+
+</div>
+</div>
+<a id="a83ca41355f79af55a99237949f537569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ca41355f79af55a99237949f537569">&#9670;&nbsp;</a></span>key_exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::key_exists </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查key是否存在 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>存在返回true， 否则返回false </dd></dl>
+
+</div>
+</div>
+<a id="ad951625e0e2485053c382c81eaf2c596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad951625e0e2485053c382c81eaf2c596">&#9670;&nbsp;</a></span>key_expire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::key_expire </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为给定 key 设置过期时间（秒） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">seconds</td><td>过期时间秒数 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>设置成功返回true，否则返回false </dd></dl>
+
+</div>
+</div>
+<a id="add8e8c150ad970c621077f85958abeb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add8e8c150ad970c621077f85958abeb9">&#9670;&nbsp;</a></span>key_expireat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::key_expireat </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qint64&#160;</td>
+          <td class="paramname"><em>timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>和 EXPIRE 类似, 不同在于 EXPIREAT 命令接受的时间参数是 UNIX 时间戳(unix timestamp) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>到期的时间戳 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>设置成功返回true，否则返回false </dd></dl>
+
+</div>
+</div>
+<a id="af8cd8aef60cda0d2e3723d64ffd4ca2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8cd8aef60cda0d2e3723d64ffd4ca2f">&#9670;&nbsp;</a></span>key_pttl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::key_pttl </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>以毫秒为单位返回 key 的剩余的过期时间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>剩余的过期时间（毫秒） </dd></dl>
+
+</div>
+</div>
+<a id="afd725e698e68d029df7b6ce9d22a466c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd725e698e68d029df7b6ce9d22a466c">&#9670;&nbsp;</a></span>key_rename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::key_rename </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>newkey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>修改 key 的名称 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">newkey</td><td>新的键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>重命名成功返回true，否则返回false </dd></dl>
+
+</div>
+</div>
+<a id="a0e9df4deb04a3df6f9b3c3508b593be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9df4deb04a3df6f9b3c3508b593be0">&#9670;&nbsp;</a></span>key_ttl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::key_ttl </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>以秒为单位返回 key 的剩余的过期时间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>剩余的过期时间（秒） </dd></dl>
+
+</div>
+</div>
+<a id="abea39bd6d5f09f0130ba05d3ba26d5c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea39bd6d5f09f0130ba05d3ba26d5c2">&#9670;&nbsp;</a></span>key_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LHRedis::key_type </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回 key 所储存的值的类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>键的类型 </dd></dl>
+
+</div>
+</div>
+<a id="a2195c4ea366cfa36b07b1c0b788c0a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2195c4ea366cfa36b07b1c0b788c0a8c">&#9670;&nbsp;</a></span>keys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::keys </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查找所有符合给定模式( pattern)的 key </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pattern</td><td>给定的模式(例如*、test*) </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>符合给定模式的键列表 </dd></dl>
+
+</div>
+</div>
+<a id="aa0aa7136fca6558a96c94fb0a5928111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0aa7136fca6558a96c94fb0a5928111">&#9670;&nbsp;</a></span>list_blpop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::list_blpop </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移出并获取列表的第一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">timeout</td><td>超时时间（秒） </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回弹出的元素列表 </dd></dl>
+
+</div>
+</div>
+<a id="a536f5923c7100e9b4cd6c3341378c106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a536f5923c7100e9b4cd6c3341378c106">&#9670;&nbsp;</a></span>list_brpop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::list_brpop </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移出并获取列表的最后一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">timeout</td><td>超时时间（秒） </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回弹出的元素列表 </dd></dl>
+
+</div>
+</div>
+<a id="aaab264533fe55d6e52843e9346e967e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaab264533fe55d6e52843e9346e967e0">&#9670;&nbsp;</a></span>list_brpoplpush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::list_brpoplpush </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从列表中弹出一个值，将弹出的元素插入到另外一个列表中并返回它； 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>弹出元素的键名称 </td></tr>
+    <tr><td class="paramname">destination</td><td>插入元素的键名称 </td></tr>
+    <tr><td class="paramname">timeout</td><td>超时时间（秒） </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回弹出的元素列表 </dd></dl>
+
+</div>
+</div>
+<a id="aaaad36ee0b4f452cd26f9da2db841d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaad36ee0b4f452cd26f9da2db841d60">&#9670;&nbsp;</a></span>list_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LHRedis::list_index </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通过索引获取列表中的元素。你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">index</td><td>键名对应的列表中元素的索引序号 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回索引对应的元素，不存在返回NULL </dd></dl>
+
+</div>
+</div>
+<a id="a031557fc0be504c0013a8d24fe4b27ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031557fc0be504c0013a8d24fe4b27ae">&#9670;&nbsp;</a></span>list_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::list_insert </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>pivot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在列表的元素前或者后插入元素。 当指定元素不存在于列表中时，不执行任何操作。 当列表不存在时，被视为空列表，不执行任何操作。 如果 key 不是列表类型，返回一个错误。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">position</td><td>插入元素前后（BEFORE|AFTER） </td></tr>
+    <tr><td class="paramname">pivot</td><td>作为参考的元素值 </td></tr>
+    <tr><td class="paramname">value</td><td>插入的元素值 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功则返回当前列表的元素个数，失败返回-1 </dd></dl>
+
+</div>
+</div>
+<a id="a154c42ef4b3f9051332fcf2c9cb26b70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154c42ef4b3f9051332fcf2c9cb26b70">&#9670;&nbsp;</a></span>list_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::list_len </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回获取列表长度（列表元素个数）。如果列表 key 不存在，则 key 被解释为一个空列表，返回 0 。 如果 key 不是列表类型，返回一个错误。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回列表元素个数，不存在返回0 </dd></dl>
+
+</div>
+</div>
+<a id="ab40f73385d0c343ce292d3f6b5a10ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab40f73385d0c343ce292d3f6b5a10ba7">&#9670;&nbsp;</a></span>list_lpop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LHRedis::list_lpop </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移出并获取列表的第一个元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回列表的第一个元素，不存在则返回NULL </dd></dl>
+
+</div>
+</div>
+<a id="a7b5a65d98bc1b82c383771324b72dbdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b5a65d98bc1b82c383771324b72dbdf">&#9670;&nbsp;</a></span>list_lpush() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::list_lpush </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将一个值插入到列表头部 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">value</td><td>需要插入的元素 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功则返回插入后元素个数，失败则返回0 </dd></dl>
+
+</div>
+</div>
+<a id="a8f337548982b8660e686c6696a348944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f337548982b8660e686c6696a348944">&#9670;&nbsp;</a></span>list_lpush() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::list_lpush </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将多个值插入到列表头部 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">values</td><td>需要插入的元素列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功则返回插入后元素个数，失败则返回0 </dd></dl>
+
+</div>
+</div>
+<a id="a272cff26bdd760146a95521bbb1feecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a272cff26bdd760146a95521bbb1feecd">&#9670;&nbsp;</a></span>list_lpushx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::list_lpushx </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将一个或多个值插入到已存在的列表头部，列表不存在时操作无效 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">values</td><td></td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功则返回插入后元素个数，失败则返回0 </dd></dl>
+
+</div>
+</div>
+<a id="a99134a4bbd75be634883c22113fd138e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99134a4bbd75be634883c22113fd138e">&#9670;&nbsp;</a></span>list_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::list_range </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Redis Lrange 返回列表中指定区间内的元素，区间以偏移量 start 和 end 指定。 其中 0 表示列表的第一个元素， 1表示列表的第二个元素，以此类推。 你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">start</td><td>指定的区间起始偏移量 </td></tr>
+    <tr><td class="paramname">end</td><td>指定的区间起始偏移量 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回当前区间内的元素列表 </dd></dl>
+
+</div>
+</div>
+<a id="a1fcbae338191ae042863161370ae5079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fcbae338191ae042863161370ae5079">&#9670;&nbsp;</a></span>list_rem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::list_rem </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Redis Lrem 根据参数 count 的值，移除列表中与参数 value 相等的元素 COUNT 的值可以是以下几种： count &gt; 0 : 从表头开始向表尾搜索，移除与 VALUE 相等的元素，数量为 COUNT count &lt; 0 : 从表尾开始向表头搜索，移除与 VALUE 相等的元素，数量为 COUNT 的绝对值 count = 0 : 移除表中所有与 VALUE 相等的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">count</td><td>需要移除的元素个数 </td></tr>
+    <tr><td class="paramname">value</td><td>需要移除的元素值 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回成功移除的元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="a02d5ec69ebe8977b9c305e2143ca32ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d5ec69ebe8977b9c305e2143ca32ae">&#9670;&nbsp;</a></span>list_rpop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LHRedis::list_rpop </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移除并返回列表的最后一个元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回最后一个元素，不存在则返回NULL </dd></dl>
+
+</div>
+</div>
+<a id="a0cbfc4dab23c238ad0229dd2ffca882f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cbfc4dab23c238ad0229dd2ffca882f">&#9670;&nbsp;</a></span>list_rpoplpush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LHRedis::list_rpoplpush </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移除列表的最后一个元素，并将该元素添加到另一个列表并返回 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>移除元素的键名称 </td></tr>
+    <tr><td class="paramname">destination</td><td>插入元素的键名称 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回最后一个元素，不存在则返回NULL </dd></dl>
+
+</div>
+</div>
+<a id="abc62ce73668c1f2605afaa516d3bc48a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc62ce73668c1f2605afaa516d3bc48a">&#9670;&nbsp;</a></span>list_rpush() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::list_rpush </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将一个值插入到列表的尾部(最右边)。如果列表不存在，一个空列表会被创建并执行 RPUSH 操作。 当列表存在但不是列表类型时，返回一个错误 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">values</td><td>需要插入的元素 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回插入后的元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="a2e2c7d073ac91c96479fae3a2ef4d5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e2c7d073ac91c96479fae3a2ef4d5c8">&#9670;&nbsp;</a></span>list_rpush() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::list_rpush </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将多个值插入到列表的尾部(最右边)。如果列表不存在，一个空列表会被创建并执行 RPUSH 操作。 当列表存在但不是列表类型时，返回一个错误 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">values</td><td>需要插入的元素列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回插入后的元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="ae1a16632dd2e247191b8fe6e2c79047d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a16632dd2e247191b8fe6e2c79047d">&#9670;&nbsp;</a></span>list_rpushx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::list_rpushx </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将一个或多个值插入到已存在的列表尾部(最右边)。如果列表不存在，操作无效 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">values</td><td>需要插入的元素列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回插入后的元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="aa818690baac91d45fcfb1cdfec28a46a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa818690baac91d45fcfb1cdfec28a46a">&#9670;&nbsp;</a></span>list_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::list_set </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通过索引来设置元素的值。 当索引参数超出范围，或对一个空列表进行 LSET 时，返回一个错误。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">index</td><td>索引号 </td></tr>
+    <tr><td class="paramname">value</td><td>元素值 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回1，失败返回0 </dd></dl>
+
+</div>
+</div>
+<a id="a8174e8640f00b80f679e73e28c94bdd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8174e8640f00b80f679e73e28c94bdd1">&#9670;&nbsp;</a></span>list_trim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::list_trim </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>对一个列表进行修剪(trim)，就是说，让列表只保留指定区间内的元素，不在指定区间之内的元素都将被删除。 下标 0 表示列表的第一个元素，以 1 表示列表的第二个元素，以此类推。 你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">start</td><td>指定的区间起始偏移量 </td></tr>
+    <tr><td class="paramname">stop</td><td>指定的区间起始偏移量 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true，失败返回false </dd></dl>
+
+</div>
+</div>
+<a id="a78e74074d7c5da936bc930145e37d8cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e74074d7c5da936bc930145e37d8cd">&#9670;&nbsp;</a></span>psubscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LHRedis::psubscribe </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>订阅一个或多个符合给定模式的频道。每个模式以 * 作为匹配符，比如 it* 匹配所有以 it 开头的频道( it.news 、 it.blog 、 it.tweets 等等)。 news.* 匹配所有以 news. 开头的频道( news.it 、 news.global.today 等等)，诸如此类。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>通道名称 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a80bca16f4622309a7f0cf67179cd0c02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80bca16f4622309a7f0cf67179cd0c02">&#9670;&nbsp;</a></span>publish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LHRedis::publish </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将信息发送到指定的频道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>通道名称 </td></tr>
+    <tr><td class="paramname">message</td><td>需要发布的消息 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef826e5865da163d3143f68f8188721b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef826e5865da163d3143f68f8188721b">&#9670;&nbsp;</a></span>punsubscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LHRedis::punsubscribe </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>退订所有给定模式的频道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>通道名称 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad19b27a9e0578135e113f50ef0020107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad19b27a9e0578135e113f50ef0020107">&#9670;&nbsp;</a></span>set_add() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::set_add </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>member</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将一个成员元素加入到集合中，已经存在于集合的成员元素将被忽略。 假如集合 key 不存在，则创建一个只包含添加的元素作成员的集合。 当集合 key 不是集合类型时，返回一个错误。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">member</td><td>添加的元素 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回成功添加的元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="a76f18d456845ce5d8bc54b10962a927e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f18d456845ce5d8bc54b10962a927e">&#9670;&nbsp;</a></span>set_add() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::set_add </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>members</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将多个成员元素加入到集合中，已经存在于集合的成员元素将被忽略。 假如集合 key 不存在，则创建一个只包含添加的元素作成员的集合。 当集合 key 不是集合类型时，返回一个错误。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">members</td><td>添加的元素列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回成功添加的元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="aa304fa7d42ee63b40825d42f77ce2c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa304fa7d42ee63b40825d42f77ce2c67">&#9670;&nbsp;</a></span>set_card()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::set_card </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回集合中元素的数量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="a084553a6093b18ea6f76fab2a1425009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a084553a6093b18ea6f76fab2a1425009">&#9670;&nbsp;</a></span>set_diff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::set_diff </td>
+          <td>(</td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回给定集合之间的差集。不存在的集合 key 将视为空集 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>键名列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回差集元素列表 </dd></dl>
+
+</div>
+</div>
+<a id="ab9fda58bd063bec3af52ed35d7aa36e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9fda58bd063bec3af52ed35d7aa36e5">&#9670;&nbsp;</a></span>set_diffstore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::set_diffstore </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将给定集合之间的差集存储在指定的集合中。如果指定的集合 key 已存在，则会被覆盖 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>存储的指定集合 </td></tr>
+    <tr><td class="paramname">keys</td><td>键名列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回差集元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="a3b168a6bffdb0e794cadc23a5e03ad13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b168a6bffdb0e794cadc23a5e03ad13">&#9670;&nbsp;</a></span>set_inter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::set_inter </td>
+          <td>(</td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回给定所有给定集合的交集。不存在的集合 key 被视为空集。 当给定集合当中有一个空集时，结果也为空集(根据集合运算定律) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>键名列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回交集元素列表 </dd></dl>
+
+</div>
+</div>
+<a id="ab2b55a2aa2f24c527bce3912a4683f99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b55a2aa2f24c527bce3912a4683f99">&#9670;&nbsp;</a></span>set_interstore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::set_interstore </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将给定集合之间的交集存储在指定的集合中。如果指定的集合已经存在，则将其覆盖 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>存储的指定集合 </td></tr>
+    <tr><td class="paramname">keys</td><td>键名列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回交集元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="ab2e10043b7db13e5602dc3a565852f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e10043b7db13e5602dc3a565852f81">&#9670;&nbsp;</a></span>set_ismember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::set_ismember </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>member</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>判断成员元素是否是集合的成员 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">member</td><td>需要判断的元素 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是集合成员则返回true，不是则返回false </dd></dl>
+
+</div>
+</div>
+<a id="a383eb7f65e79ed45a802f1caa6650c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a383eb7f65e79ed45a802f1caa6650c96">&#9670;&nbsp;</a></span>set_members()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::set_members </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回集合中的所有的成员。 不存在的集合 key 被视为空集合 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回集合中所有元素 </dd></dl>
+
+</div>
+</div>
+<a id="a6dfddf33e0abe95bc1f9486e507b1f94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dfddf33e0abe95bc1f9486e507b1f94">&#9670;&nbsp;</a></span>set_move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::set_move </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>member</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将指定成员 member 元素从 source 集合移动到 destination 集合。 SMOVE 是原子性操作。 如果 source 集合不存在或不包含指定的 member 元素，则 SMOVE 命令不执行任何操作，仅返回 0 。否则， member 元素从 source 集合中被移除，并添加到 destination 集合中去。 当 destination 集合已经包含 member 元素时， SMOVE 命令只是简单地将 source 集合中的 member 元素删除。 当 source 或 destination 不是集合类型时，返回一个错误。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>源集合 </td></tr>
+    <tr><td class="paramname">destination</td><td>目标集合 </td></tr>
+    <tr><td class="paramname">member</td><td>需要移动的元素 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true，失败返回false </dd></dl>
+
+</div>
+</div>
+<a id="a481a5d7521397ec00fe706ba796303bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481a5d7521397ec00fe706ba796303bb">&#9670;&nbsp;</a></span>set_pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LHRedis::set_pop </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移除并返回集合中的一个随机元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回随机移除的元素，不存在则返回NULL </dd></dl>
+
+</div>
+</div>
+<a id="a3a1b74f32c38b7e75f2722cfaab425ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a1b74f32c38b7e75f2722cfaab425ea">&#9670;&nbsp;</a></span>set_randmember() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QStringList LHRedis::set_randmember </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回集合中的一个随机元素。 该操作和 SPOP 相似，但 SPOP 将随机元素从集合中移除并返回，而 Srandmember 则仅仅返回随机元素，而不对集合进行任何改动。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回随机的元素，不存在则返回NULL </dd></dl>
+
+</div>
+</div>
+<a id="ad4547f0e1820d684ca58db185117b5f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4547f0e1820d684ca58db185117b5f1">&#9670;&nbsp;</a></span>set_randmember() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::set_randmember </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回集合中的一个随机元素。 从 Redis 2.6 版本开始， Srandmember 命令接受可选的 count 参数： 如果 count 为正数，且小于集合基数，那么命令返回一个包含 count 个元素的数组，数组中的元素各不相同。如果 count 大于等于集合基数，那么返回整个集合。 如果 count 为负数，那么命令返回一个数组，数组中的元素可能会重复出现多次，而数组的长度为 count 的绝对值。 该操作和 SPOP 相似，但 SPOP 将随机元素从集合中移除并返回，而 Srandmember 则仅仅返回随机元素，而不对集合进行任何改动。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回随机的元素列表 </dd></dl>
+
+</div>
+</div>
+<a id="aa700a5b5b3fdb72b097403d8477916a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa700a5b5b3fdb72b097403d8477916a4">&#9670;&nbsp;</a></span>set_rem() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::set_rem </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>member</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移除集合中的一个成员元素，不存在的成员元素会被忽略。当 key 不是集合类型，返回一个错误 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">member</td><td>移除的元素 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回移除的元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="acb269511da6e5d5f19a8caa7d27485e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb269511da6e5d5f19a8caa7d27485e2">&#9670;&nbsp;</a></span>set_rem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::set_rem </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>members</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移除集合中的多个成员元素，不存在的成员元素会被忽略。当 key 不是集合类型，返回一个错误 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">members</td><td>移除的元素列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回移除的元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="aedfe3d74fdab6720ba5b143b2c1b8da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfe3d74fdab6720ba5b143b2c1b8da7">&#9670;&nbsp;</a></span>set_union()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::set_union </td>
+          <td>(</td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回给定集合的并集。不存在的集合 key 被视为空集 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>键名列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回并集元素列表 </dd></dl>
+
+</div>
+</div>
+<a id="aee2cdf830096548a181d43929ed48f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee2cdf830096548a181d43929ed48f5a">&#9670;&nbsp;</a></span>set_unionstore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::set_unionstore </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将给定集合的并集存储在指定的集合 destination 中。如果 destination 已经存在，则将其覆盖 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td></td></tr>
+    <tr><td class="paramname">keys</td><td>键名列表 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回并集元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="aaf3281717deb775e152734d289a5d8e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf3281717deb775e152734d289a5d8e6">&#9670;&nbsp;</a></span>string_append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::string_append </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>如果 key 已经存在并且是一个字符串， APPEND 命令将 value 追加到 key 原来的值的末尾; 不存在则设置key值为value </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">value</td><td>键名对应的值 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回追加后的值 </dd></dl>
+
+</div>
+</div>
+<a id="abae0714f23828a78f57fc3fd6d09247a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abae0714f23828a78f57fc3fd6d09247a">&#9670;&nbsp;</a></span>string_decr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::string_decr </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将 key 中储存的数字值减一 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回减少后的值 </dd></dl>
+
+</div>
+</div>
+<a id="a05d1981d565a7982da1b9bf67b5ec0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05d1981d565a7982da1b9bf67b5ec0e9">&#9670;&nbsp;</a></span>string_decrby()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::string_decrby </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>interval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>key 所储存的值减去给定的减量值（decrement） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">interval</td><td>减量值 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回减少后的值 </dd></dl>
+
+</div>
+</div>
+<a id="a00a2a5ab5705cb5f5387efaefeb939ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a2a5ab5705cb5f5387efaefeb939ad">&#9670;&nbsp;</a></span>string_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LHRedis::string_get </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定 key 的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回key对应的值，不存在则返回NULL </dd></dl>
+
+</div>
+</div>
+<a id="ac5569c2e4fc0b29b7df510923d3c35cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5569c2e4fc0b29b7df510923d3c35cb">&#9670;&nbsp;</a></span>string_getrange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LHRedis::string_getrange </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回 key 中字符串值的子字符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">start</td><td>键名对应的value中的起始位置 </td></tr>
+    <tr><td class="paramname">stop</td><td>键名对应的value中的结束位置 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回满足条件的子串，不存在或超出范围返回空串 </dd></dl>
+
+</div>
+</div>
+<a id="a3b139ccad5cc5088db0771e2e7374c97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b139ccad5cc5088db0771e2e7374c97">&#9670;&nbsp;</a></span>string_incr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::string_incr </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将 key 中储存的数字值增一 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回增加后的值 </dd></dl>
+
+</div>
+</div>
+<a id="accc9ec4bc4b8d07efaea4a89335efc04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc9ec4bc4b8d07efaea4a89335efc04">&#9670;&nbsp;</a></span>string_incrby()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LHRedis::string_incrby </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>interval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将 key 所储存的值加上给定的增量值（increment） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">interval</td><td>增量值 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回增加后的值 </dd></dl>
+
+</div>
+</div>
+<a id="a1de944b387542448fd0d9df0d38d12fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de944b387542448fd0d9df0d38d12fd">&#9670;&nbsp;</a></span>string_mget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LHRedis::string_mget </td>
+          <td>(</td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取所有(一个或多个)给定 key 的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>键名列表 </td></tr>
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a45356cbec78b37ab817411876ddbf465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45356cbec78b37ab817411876ddbf465">&#9670;&nbsp;</a></span>string_mset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::string_mset </td>
+          <td>(</td>
+          <td class="paramtype">QMap&lt; QString, QVariant &gt;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>同时设置一个或多个 key-value 对 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>需要设置的键值对组合 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>设置成功返回true，否则返回false </dd></dl>
+
+</div>
+</div>
+<a id="a63b9891ecdaf00a80ed3bf3721e5b462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b9891ecdaf00a80ed3bf3721e5b462">&#9670;&nbsp;</a></span>string_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LHRedis::string_set </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置指定 key 的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键名 </td></tr>
+    <tr><td class="paramname">value</td><td>键名对应的值 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true，否则返回false </dd></dl>
+
+</div>
+</div>
+<a id="adc606671df27e7c3b028d627ac43d792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc606671df27e7c3b028d627ac43d792">&#9670;&nbsp;</a></span>subscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LHRedis::subscribe </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>订阅给定的一个或多个频道的信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>通道名称 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad47a9b2483fe0c669fa53faf12a784ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad47a9b2483fe0c669fa53faf12a784ca">&#9670;&nbsp;</a></span>unsubscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LHRedis::unsubscribe </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>退订给定的一个或多个频道的信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>通道名称 </td></tr>
+    <tr><td class="paramname">error</td><td>是否发生错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="lht__redis_8h_source.html">lht_redis.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

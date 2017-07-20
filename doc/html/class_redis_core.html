@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Redis4Qt: RedisCore类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="redis.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Redis4Qt
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">Redis API for Qt framework</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#signals">信号</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_redis_core-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">RedisCore类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 RedisCore 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_redis_core.png" usemap="#RedisCore_map" alt=""/>
+  <map id="RedisCore_map" name="RedisCore_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_redis_core_1_1_reply.html">Reply</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ac0d9bf6ebcb38c626679338c842425ac"><td class="memItemLeft" align="right" valign="top"><a id="ac0d9bf6ebcb38c626679338c842425ac"></a>
+typedef struct <a class="el" href="struct_redis_core_1_1_reply.html">RedisCore::Reply</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Reply</b></td></tr>
+<tr class="separator:ac0d9bf6ebcb38c626679338c842425ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+信号</h2></td></tr>
+<tr class="memitem:aca500a8bd9622bc7cf62f977fc3b2215"><td class="memItemLeft" align="right" valign="top"><a id="aca500a8bd9622bc7cf62f977fc3b2215"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>connected</b> ()</td></tr>
+<tr class="separator:aca500a8bd9622bc7cf62f977fc3b2215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0cb61d94875620928b4314a43bcd29e"><td class="memItemLeft" align="right" valign="top"><a id="ae0cb61d94875620928b4314a43bcd29e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnected</b> ()</td></tr>
+<tr class="separator:ae0cb61d94875620928b4314a43bcd29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab496d4471639de1232a349058bb40b43"><td class="memItemLeft" align="right" valign="top"><a id="ab496d4471639de1232a349058bb40b43"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>returnData</b> (<a class="el" href="struct_redis_core_1_1_reply.html">Reply</a>)</td></tr>
+<tr class="separator:ab496d4471639de1232a349058bb40b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc128ebdb54a358096afba7d71aa7da"><td class="memItemLeft" align="right" valign="top"><a id="a4cc128ebdb54a358096afba7d71aa7da"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cmdSuccess</b> ()</td></tr>
+<tr class="separator:a4cc128ebdb54a358096afba7d71aa7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8b8e6f327baa99df1b00f35f284b4594"><td class="memItemLeft" align="right" valign="top"><a id="a8b8e6f327baa99df1b00f35f284b4594"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RedisCore</b> (QString host, int port, QObject *parent=0)</td></tr>
+<tr class="separator:a8b8e6f327baa99df1b00f35f284b4594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ab208cec1318143cc12491b9350d58"><td class="memItemLeft" align="right" valign="top"><a id="a59ab208cec1318143cc12491b9350d58"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>openConnection</b> ()</td></tr>
+<tr class="separator:a59ab208cec1318143cc12491b9350d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5625df89b941dadfbca93d50e50d57ab"><td class="memItemLeft" align="right" valign="top"><a id="a5625df89b941dadfbca93d50e50d57ab"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>closeConnection</b> ()</td></tr>
+<tr class="separator:a5625df89b941dadfbca93d50e50d57ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0712d3511a595f2f993ac3ac91299d4"><td class="memItemLeft" align="right" valign="top"><a id="ae0712d3511a595f2f993ac3ac91299d4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConnected</b> ()</td></tr>
+<tr class="separator:ae0712d3511a595f2f993ac3ac91299d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a788011ae26b2d2452a26b153f2a820"><td class="memItemLeft" align="right" valign="top"><a id="a9a788011ae26b2d2452a26b153f2a820"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getLastError</b> ()</td></tr>
+<tr class="separator:a9a788011ae26b2d2452a26b153f2a820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0e691db8ab58f4e543f3290bdb1ac1"><td class="memItemLeft" align="right" valign="top"><a id="a5a0e691db8ab58f4e543f3290bdb1ac1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLastError</b> (int error)</td></tr>
+<tr class="separator:a5a0e691db8ab58f4e543f3290bdb1ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a020b356ea9fd2dd5d657f23085ff524f"><td class="memItemLeft" align="right" valign="top"><a id="a020b356ea9fd2dd5d657f23085ff524f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeout</b> (int timeout)</td></tr>
+<tr class="separator:a020b356ea9fd2dd5d657f23085ff524f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e81246b46f51f71ff69dc1b7ad9cc4"><td class="memItemLeft" align="right" valign="top"><a id="a76e81246b46f51f71ff69dc1b7ad9cc4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>publish</b> (QString, QString)</td></tr>
+<tr class="separator:a76e81246b46f51f71ff69dc1b7ad9cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca1ef843083a2af23cfe57d3e89e6572"><td class="memItemLeft" align="right" valign="top"><a id="aca1ef843083a2af23cfe57d3e89e6572"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>subscribe</b> (QString)</td></tr>
+<tr class="separator:aca1ef843083a2af23cfe57d3e89e6572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770df4e6a8c54f7a502e30c930d3c344"><td class="memItemLeft" align="right" valign="top"><a id="a770df4e6a8c54f7a502e30c930d3c344"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>unsubscribe</b> (QString)</td></tr>
+<tr class="separator:a770df4e6a8c54f7a502e30c930d3c344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f1002353e8eca8999fabb1add5499b"><td class="memItemLeft" align="right" valign="top"><a id="aa5f1002353e8eca8999fabb1add5499b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>psubscribe</b> (QString)</td></tr>
+<tr class="separator:aa5f1002353e8eca8999fabb1add5499b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499aafb3954cab2ab2e51a960d58c78f"><td class="memItemLeft" align="right" valign="top"><a id="a499aafb3954cab2ab2e51a960d58c78f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>punsubscribe</b> (QString)</td></tr>
+<tr class="separator:a499aafb3954cab2ab2e51a960d58c78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa590f9dbeba1f6b6542ec153553fb641"><td class="memItemLeft" align="right" valign="top"><a id="aa590f9dbeba1f6b6542ec153553fb641"></a>
+<a class="el" href="struct_redis_core_1_1_reply.html">Reply</a>&#160;</td><td class="memItemRight" valign="bottom"><b>command</b> (QString)</td></tr>
+<tr class="separator:aa590f9dbeba1f6b6542ec153553fb641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c86df59a235793d8785ec40d39a8b3"><td class="memItemLeft" align="right" valign="top"><a id="a03c86df59a235793d8785ec40d39a8b3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>append</b> (QString key, QString value)</td></tr>
+<tr class="separator:a03c86df59a235793d8785ec40d39a8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88939bd66a7ebde78b5aec7276876521"><td class="memItemLeft" align="right" valign="top"><a id="a88939bd66a7ebde78b5aec7276876521"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>auth</b> (QString password)</td></tr>
+<tr class="separator:a88939bd66a7ebde78b5aec7276876521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2884e58d1ce1fc758fbcddbe35bed87c"><td class="memItemLeft" align="right" valign="top"><a id="a2884e58d1ce1fc758fbcddbe35bed87c"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>blpop</b> (QString key, int timeout)</td></tr>
+<tr class="separator:a2884e58d1ce1fc758fbcddbe35bed87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8563793751fb19764a09e6d4fdb075d0"><td class="memItemLeft" align="right" valign="top"><a id="a8563793751fb19764a09e6d4fdb075d0"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>brpop</b> (QString key, int timeout)</td></tr>
+<tr class="separator:a8563793751fb19764a09e6d4fdb075d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20e8a0a252b5df9f8434af8a80bccf84"><td class="memItemLeft" align="right" valign="top"><a id="a20e8a0a252b5df9f8434af8a80bccf84"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>brpoplpush</b> (QString source, QString destination, int timeout)</td></tr>
+<tr class="separator:a20e8a0a252b5df9f8434af8a80bccf84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4593c88e6e20833b88913c6b508e348f"><td class="memItemLeft" align="right" valign="top"><a id="a4593c88e6e20833b88913c6b508e348f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>decr</b> (QString key)</td></tr>
+<tr class="separator:a4593c88e6e20833b88913c6b508e348f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1010407a75657afe8bb1b568477b5457"><td class="memItemLeft" align="right" valign="top"><a id="a1010407a75657afe8bb1b568477b5457"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>decrby</b> (QString key, int interval)</td></tr>
+<tr class="separator:a1010407a75657afe8bb1b568477b5457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eb0211547aa07d8f2ae5190246ba894"><td class="memItemLeft" align="right" valign="top"><a id="a2eb0211547aa07d8f2ae5190246ba894"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>del</b> (QString key)</td></tr>
+<tr class="separator:a2eb0211547aa07d8f2ae5190246ba894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefeda207b426c41bd82f03ac7c7902b1"><td class="memItemLeft" align="right" valign="top"><a id="aefeda207b426c41bd82f03ac7c7902b1"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>dump</b> (QString key)</td></tr>
+<tr class="separator:aefeda207b426c41bd82f03ac7c7902b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a197044a8d2b4009d77c8461388708a7f"><td class="memItemLeft" align="right" valign="top"><a id="a197044a8d2b4009d77c8461388708a7f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>exists</b> (QString key)</td></tr>
+<tr class="separator:a197044a8d2b4009d77c8461388708a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85f6b41a46a45d23a9d9b732044f8938"><td class="memItemLeft" align="right" valign="top"><a id="a85f6b41a46a45d23a9d9b732044f8938"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>expire</b> (QString key, int seconds)</td></tr>
+<tr class="separator:a85f6b41a46a45d23a9d9b732044f8938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2650a0ddb4da700067c4f7a644b29f6"><td class="memItemLeft" align="right" valign="top"><a id="ab2650a0ddb4da700067c4f7a644b29f6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>expireat</b> (QString key, qint64 timestamp)</td></tr>
+<tr class="separator:ab2650a0ddb4da700067c4f7a644b29f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6afc89356d8dd9ba8dd8063b6c5d7c5"><td class="memItemLeft" align="right" valign="top"><a id="ab6afc89356d8dd9ba8dd8063b6c5d7c5"></a>
+QVariant&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (QString script, int numkeys, QString keys, QString arguments)</td></tr>
+<tr class="separator:ab6afc89356d8dd9ba8dd8063b6c5d7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248426a8b22d6819ca27dfcaa3a89f23"><td class="memItemLeft" align="right" valign="top"><a id="a248426a8b22d6819ca27dfcaa3a89f23"></a>
+QVariant&#160;</td><td class="memItemRight" valign="bottom"><b>evalsha</b> (QString sha1, int numkeys, QString keys, QString arguments)</td></tr>
+<tr class="separator:a248426a8b22d6819ca27dfcaa3a89f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a446f2678e971b4fa72e499d739f694"><td class="memItemLeft" align="right" valign="top"><a id="a6a446f2678e971b4fa72e499d739f694"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (QString key)</td></tr>
+<tr class="separator:a6a446f2678e971b4fa72e499d739f694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad43617578a04d2bb403bc2480075142"><td class="memItemLeft" align="right" valign="top"><a id="aad43617578a04d2bb403bc2480075142"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getrange</b> (QString key, int start, int stop)</td></tr>
+<tr class="separator:aad43617578a04d2bb403bc2480075142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e487b84225b0cc3d6b794a04f685a72"><td class="memItemLeft" align="right" valign="top"><a id="a3e487b84225b0cc3d6b794a04f685a72"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>hdel</b> (QString key, QStringList fields)</td></tr>
+<tr class="separator:a3e487b84225b0cc3d6b794a04f685a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18177c87ff4b28c12a814653077eeaf5"><td class="memItemLeft" align="right" valign="top"><a id="a18177c87ff4b28c12a814653077eeaf5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hexists</b> (QString key, QString field)</td></tr>
+<tr class="separator:a18177c87ff4b28c12a814653077eeaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7830fb4872688358230fe627340d7bf3"><td class="memItemLeft" align="right" valign="top"><a id="a7830fb4872688358230fe627340d7bf3"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>hget</b> (QString key, QString field)</td></tr>
+<tr class="separator:a7830fb4872688358230fe627340d7bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bdd0780ae39e8314d8cfd3090a0d4c"><td class="memItemLeft" align="right" valign="top"><a id="ab2bdd0780ae39e8314d8cfd3090a0d4c"></a>
+QMap&lt; QString, QVariant &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hgetall</b> (QString key)</td></tr>
+<tr class="separator:ab2bdd0780ae39e8314d8cfd3090a0d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7ce0e5f9e6a4f4a24c3316bac19b38"><td class="memItemLeft" align="right" valign="top"><a id="a2f7ce0e5f9e6a4f4a24c3316bac19b38"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>hincrby</b> (QString key, QString field, int increment)</td></tr>
+<tr class="separator:a2f7ce0e5f9e6a4f4a24c3316bac19b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2558ccabf6b8f00648dc4d27a5d34fe"><td class="memItemLeft" align="right" valign="top"><a id="ab2558ccabf6b8f00648dc4d27a5d34fe"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>hincrbyfloat</b> (QString key, QString field, float increment)</td></tr>
+<tr class="separator:ab2558ccabf6b8f00648dc4d27a5d34fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2373fe93ec4f5e96aadc64d480e13f2"><td class="memItemLeft" align="right" valign="top"><a id="aa2373fe93ec4f5e96aadc64d480e13f2"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>hkeys</b> (QString key)</td></tr>
+<tr class="separator:aa2373fe93ec4f5e96aadc64d480e13f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237eae351d5cfcfaa3f0a068cf76db41"><td class="memItemLeft" align="right" valign="top"><a id="a237eae351d5cfcfaa3f0a068cf76db41"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>hlen</b> (QString key)</td></tr>
+<tr class="separator:a237eae351d5cfcfaa3f0a068cf76db41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665e9cbf8941d95544fe22ac38ea2dc3"><td class="memItemLeft" align="right" valign="top"><a id="a665e9cbf8941d95544fe22ac38ea2dc3"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>hmget</b> (QString key, QStringList fields)</td></tr>
+<tr class="separator:a665e9cbf8941d95544fe22ac38ea2dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd80e6e80a787e41f532d34a2b97963"><td class="memItemLeft" align="right" valign="top"><a id="acbd80e6e80a787e41f532d34a2b97963"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hmset</b> (QString key, QMap&lt; QString, QVariant &gt; map)</td></tr>
+<tr class="separator:acbd80e6e80a787e41f532d34a2b97963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19fe610e47153e3f4c4ea218a952480f"><td class="memItemLeft" align="right" valign="top"><a id="a19fe610e47153e3f4c4ea218a952480f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hset</b> (QString key, QString field, QString value)</td></tr>
+<tr class="separator:a19fe610e47153e3f4c4ea218a952480f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8be3ac47334ad958b3669ce64e0025b3"><td class="memItemLeft" align="right" valign="top"><a id="a8be3ac47334ad958b3669ce64e0025b3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hsetnx</b> (QString key, QString field, QString value)</td></tr>
+<tr class="separator:a8be3ac47334ad958b3669ce64e0025b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb026ea859503eac4928615a494047f2"><td class="memItemLeft" align="right" valign="top"><a id="aeb026ea859503eac4928615a494047f2"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>hvals</b> (QString key)</td></tr>
+<tr class="separator:aeb026ea859503eac4928615a494047f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af791757a67d718bfc6321600c2b613ff"><td class="memItemLeft" align="right" valign="top"><a id="af791757a67d718bfc6321600c2b613ff"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>incr</b> (QString key)</td></tr>
+<tr class="separator:af791757a67d718bfc6321600c2b613ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6a10407d526f82b353e9114572123f2"><td class="memItemLeft" align="right" valign="top"><a id="ac6a10407d526f82b353e9114572123f2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>incrby</b> (QString key, int interval)</td></tr>
+<tr class="separator:ac6a10407d526f82b353e9114572123f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35730a0dedf6ac9214ed7b7b7d513f0a"><td class="memItemLeft" align="right" valign="top"><a id="a35730a0dedf6ac9214ed7b7b7d513f0a"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>keys</b> (QString pattern)</td></tr>
+<tr class="separator:a35730a0dedf6ac9214ed7b7b7d513f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aad30babe54abf52ac43b1415dba8a9"><td class="memItemLeft" align="right" valign="top"><a id="a2aad30babe54abf52ac43b1415dba8a9"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>lindex</b> (QString key, int index)</td></tr>
+<tr class="separator:a2aad30babe54abf52ac43b1415dba8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad3f964f0a3c6ac1491ab6fb3839b3f3"><td class="memItemLeft" align="right" valign="top"><a id="aad3f964f0a3c6ac1491ab6fb3839b3f3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>linsert</b> (QString key, QString position, QString pivot, QString value)</td></tr>
+<tr class="separator:aad3f964f0a3c6ac1491ab6fb3839b3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9306b956187f407ce0ada8c07922144b"><td class="memItemLeft" align="right" valign="top"><a id="a9306b956187f407ce0ada8c07922144b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>llen</b> (QString key)</td></tr>
+<tr class="separator:a9306b956187f407ce0ada8c07922144b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31bdefff04ee579781d7b9762669ac2"><td class="memItemLeft" align="right" valign="top"><a id="ac31bdefff04ee579781d7b9762669ac2"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>lpop</b> (QString key)</td></tr>
+<tr class="separator:ac31bdefff04ee579781d7b9762669ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb5860044e9a0c698cc45c5b02fc5f4"><td class="memItemLeft" align="right" valign="top"><a id="acdb5860044e9a0c698cc45c5b02fc5f4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>lpush</b> (QString key, QStringList values)</td></tr>
+<tr class="separator:acdb5860044e9a0c698cc45c5b02fc5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ade8276a7053a58709f5eaffbdfee12"><td class="memItemLeft" align="right" valign="top"><a id="a4ade8276a7053a58709f5eaffbdfee12"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>lpushx</b> (QString key, QStringList values)</td></tr>
+<tr class="separator:a4ade8276a7053a58709f5eaffbdfee12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e549b6a8bc9e321a9f01446d49d326"><td class="memItemLeft" align="right" valign="top"><a id="aa0e549b6a8bc9e321a9f01446d49d326"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>lrange</b> (QString key, int start, int stop)</td></tr>
+<tr class="separator:aa0e549b6a8bc9e321a9f01446d49d326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7de8d379b1efeb8ff0f7ecd88332ae7"><td class="memItemLeft" align="right" valign="top"><a id="ae7de8d379b1efeb8ff0f7ecd88332ae7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>lrem</b> (QString key, int count, QString value)</td></tr>
+<tr class="separator:ae7de8d379b1efeb8ff0f7ecd88332ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a6647781d2e2db620ba13427afad302"><td class="memItemLeft" align="right" valign="top"><a id="a4a6647781d2e2db620ba13427afad302"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>lset</b> (QString key, int index, QString value)</td></tr>
+<tr class="separator:a4a6647781d2e2db620ba13427afad302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f70e4183214e4d6dbc7b6aa83f6b18"><td class="memItemLeft" align="right" valign="top"><a id="a64f70e4183214e4d6dbc7b6aa83f6b18"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ltrim</b> (QString key, int start, int stop)</td></tr>
+<tr class="separator:a64f70e4183214e4d6dbc7b6aa83f6b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a557740168cc5948716351371e3515a2e"><td class="memItemLeft" align="right" valign="top"><a id="a557740168cc5948716351371e3515a2e"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>mget</b> (QStringList keys)</td></tr>
+<tr class="separator:a557740168cc5948716351371e3515a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843b1c4a233ba69bd14ae47a4c7ec82c"><td class="memItemLeft" align="right" valign="top"><a id="a843b1c4a233ba69bd14ae47a4c7ec82c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>migrate</b> (QString host, int port, QString key, int database, int timeout)</td></tr>
+<tr class="separator:a843b1c4a233ba69bd14ae47a4c7ec82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ae29d9577fce9d573422d02835f33a"><td class="memItemLeft" align="right" valign="top"><a id="a60ae29d9577fce9d573422d02835f33a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>move</b> (QString key, int database)</td></tr>
+<tr class="separator:a60ae29d9577fce9d573422d02835f33a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa754c2ef647c84e3a982dc70140831d0"><td class="memItemLeft" align="right" valign="top"><a id="aa754c2ef647c84e3a982dc70140831d0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mset</b> (QMap&lt; QString, QVariant &gt; map)</td></tr>
+<tr class="separator:aa754c2ef647c84e3a982dc70140831d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff88ffcf54b0607e017e85d400367b7"><td class="memItemLeft" align="right" valign="top"><a id="a7ff88ffcf54b0607e017e85d400367b7"></a>
+QVariant&#160;</td><td class="memItemRight" valign="bottom"><b>object</b> (QString subcommand, QString arguments)</td></tr>
+<tr class="separator:a7ff88ffcf54b0607e017e85d400367b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9c15e52c5af7da58cec3fb0cb176154"><td class="memItemLeft" align="right" valign="top"><a id="aa9c15e52c5af7da58cec3fb0cb176154"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>persist</b> (QString key)</td></tr>
+<tr class="separator:aa9c15e52c5af7da58cec3fb0cb176154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f210f2b5153c6eca5f3a47e20543946"><td class="memItemLeft" align="right" valign="top"><a id="a1f210f2b5153c6eca5f3a47e20543946"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>pexpire</b> (QString key, qint64 mseconds)</td></tr>
+<tr class="separator:a1f210f2b5153c6eca5f3a47e20543946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2ed25c9e8bd4a97dc309bc62df5163"><td class="memItemLeft" align="right" valign="top"><a id="a7b2ed25c9e8bd4a97dc309bc62df5163"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>pexpireat</b> (QString key, qint64 mstimestamp)</td></tr>
+<tr class="separator:a7b2ed25c9e8bd4a97dc309bc62df5163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03497843345aaef95e3fe2cab941f1da"><td class="memItemLeft" align="right" valign="top"><a id="a03497843345aaef95e3fe2cab941f1da"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>pttl</b> (QString key)</td></tr>
+<tr class="separator:a03497843345aaef95e3fe2cab941f1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f5c0bdb37e9a9233a4dfc76c15c148"><td class="memItemLeft" align="right" valign="top"><a id="a25f5c0bdb37e9a9233a4dfc76c15c148"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>rename</b> (QString key, QString newkey)</td></tr>
+<tr class="separator:a25f5c0bdb37e9a9233a4dfc76c15c148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22cacd03f0df69de0c51de6cc06bd11"><td class="memItemLeft" align="right" valign="top"><a id="ad22cacd03f0df69de0c51de6cc06bd11"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>renamex</b> (QString key, QString newkey)</td></tr>
+<tr class="separator:ad22cacd03f0df69de0c51de6cc06bd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27f54e125ca329d7ee2b0a296a91962b"><td class="memItemLeft" align="right" valign="top"><a id="a27f54e125ca329d7ee2b0a296a91962b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>restore</b> (QString key, int ttl, QString value)</td></tr>
+<tr class="separator:a27f54e125ca329d7ee2b0a296a91962b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9939c1d2d08e813a839127f13fddecc1"><td class="memItemLeft" align="right" valign="top"><a id="a9939c1d2d08e813a839127f13fddecc1"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>rpop</b> (QString key)</td></tr>
+<tr class="separator:a9939c1d2d08e813a839127f13fddecc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01977e2e858691bd916abe63286bce17"><td class="memItemLeft" align="right" valign="top"><a id="a01977e2e858691bd916abe63286bce17"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>rpoplpush</b> (QString source, QString destination)</td></tr>
+<tr class="separator:a01977e2e858691bd916abe63286bce17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e56d05e7f79d9d70d04705635e07e95"><td class="memItemLeft" align="right" valign="top"><a id="a5e56d05e7f79d9d70d04705635e07e95"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>rpush</b> (QString key, QStringList values)</td></tr>
+<tr class="separator:a5e56d05e7f79d9d70d04705635e07e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b55336bf9a4062d6e04b9e06e8f982"><td class="memItemLeft" align="right" valign="top"><a id="a99b55336bf9a4062d6e04b9e06e8f982"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>rpushx</b> (QString key, QStringList values)</td></tr>
+<tr class="separator:a99b55336bf9a4062d6e04b9e06e8f982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab122d1f46fced9f628d9f18ea005ad6b"><td class="memItemLeft" align="right" valign="top"><a id="ab122d1f46fced9f628d9f18ea005ad6b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>sadd</b> (QString key, QStringList members)</td></tr>
+<tr class="separator:ab122d1f46fced9f628d9f18ea005ad6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fef6c07522724e833ccaada9e6d3452"><td class="memItemLeft" align="right" valign="top"><a id="a2fef6c07522724e833ccaada9e6d3452"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>scard</b> (QString key)</td></tr>
+<tr class="separator:a2fef6c07522724e833ccaada9e6d3452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64110e0c643f344a8d266f7e30a96bec"><td class="memItemLeft" align="right" valign="top"><a id="a64110e0c643f344a8d266f7e30a96bec"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>scriptexists</b> (QString script)</td></tr>
+<tr class="separator:a64110e0c643f344a8d266f7e30a96bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bdf480e437ec94f84a3acbc2f3f7339"><td class="memItemLeft" align="right" valign="top"><a id="a0bdf480e437ec94f84a3acbc2f3f7339"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>scriptflush</b> ()</td></tr>
+<tr class="separator:a0bdf480e437ec94f84a3acbc2f3f7339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa68c773cc8031f45efa0df928a8b033f"><td class="memItemLeft" align="right" valign="top"><a id="aa68c773cc8031f45efa0df928a8b033f"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>scriptkill</b> ()</td></tr>
+<tr class="separator:aa68c773cc8031f45efa0df928a8b033f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b10311c7ae7a03bfd4f72f99c4d8aab"><td class="memItemLeft" align="right" valign="top"><a id="a2b10311c7ae7a03bfd4f72f99c4d8aab"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>scriptload</b> (QString script)</td></tr>
+<tr class="separator:a2b10311c7ae7a03bfd4f72f99c4d8aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af054638ec8f09ab004f85c6326245194"><td class="memItemLeft" align="right" valign="top"><a id="af054638ec8f09ab004f85c6326245194"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>sdiff</b> (QStringList keys)</td></tr>
+<tr class="separator:af054638ec8f09ab004f85c6326245194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a553665c7398337f052dfae86ad9e876e"><td class="memItemLeft" align="right" valign="top"><a id="a553665c7398337f052dfae86ad9e876e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>sdiffstore</b> (QString destination, QStringList keys)</td></tr>
+<tr class="separator:a553665c7398337f052dfae86ad9e876e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32bd75809fbad5ac00ec520af1c4f86f"><td class="memItemLeft" align="right" valign="top"><a id="a32bd75809fbad5ac00ec520af1c4f86f"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>sinter</b> (QStringList keys)</td></tr>
+<tr class="separator:a32bd75809fbad5ac00ec520af1c4f86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e142b57e3343608685da9407cdb1c5e"><td class="memItemLeft" align="right" valign="top"><a id="a0e142b57e3343608685da9407cdb1c5e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>sinterstore</b> (QString destination, QStringList keys)</td></tr>
+<tr class="separator:a0e142b57e3343608685da9407cdb1c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6700849681a5f62e655b5880214f2b"><td class="memItemLeft" align="right" valign="top"><a id="a8d6700849681a5f62e655b5880214f2b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>sismember</b> (QString key, QString member)</td></tr>
+<tr class="separator:a8d6700849681a5f62e655b5880214f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e52339599810198b571d423d3cc6c8"><td class="memItemLeft" align="right" valign="top"><a id="a11e52339599810198b571d423d3cc6c8"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>smembers</b> (QString key)</td></tr>
+<tr class="separator:a11e52339599810198b571d423d3cc6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd86870818d3e60101d7d1b37859071f"><td class="memItemLeft" align="right" valign="top"><a id="acd86870818d3e60101d7d1b37859071f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>smove</b> (QString source, QString destination, QString member)</td></tr>
+<tr class="separator:acd86870818d3e60101d7d1b37859071f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b4feced65913b3cb0ab9c11c2278f6"><td class="memItemLeft" align="right" valign="top"><a id="ab7b4feced65913b3cb0ab9c11c2278f6"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>spop</b> (QString key)</td></tr>
+<tr class="separator:ab7b4feced65913b3cb0ab9c11c2278f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a831fd51118c00ddf0839b6f05374e4db"><td class="memItemLeft" align="right" valign="top"><a id="a831fd51118c00ddf0839b6f05374e4db"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>srandmember</b> (QString key, int count)</td></tr>
+<tr class="separator:a831fd51118c00ddf0839b6f05374e4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf3fd336551a1947a49bed77b63e9fcc"><td class="memItemLeft" align="right" valign="top"><a id="aaf3fd336551a1947a49bed77b63e9fcc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>srem</b> (QString key, QStringList members)</td></tr>
+<tr class="separator:aaf3fd336551a1947a49bed77b63e9fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ddbf0b9bdecedf19e48fbf0e2b170d"><td class="memItemLeft" align="right" valign="top"><a id="a28ddbf0b9bdecedf19e48fbf0e2b170d"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>sunion</b> (QStringList keys)</td></tr>
+<tr class="separator:a28ddbf0b9bdecedf19e48fbf0e2b170d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff76c708b11637880bfed772ee22d87"><td class="memItemLeft" align="right" valign="top"><a id="a6ff76c708b11637880bfed772ee22d87"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>sunionstore</b> (QString destination, QStringList keys)</td></tr>
+<tr class="separator:a6ff76c708b11637880bfed772ee22d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b92fb6d4b19f20b21d4ba2a5a8843ec"><td class="memItemLeft" align="right" valign="top"><a id="a6b92fb6d4b19f20b21d4ba2a5a8843ec"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (QString key, QString value)</td></tr>
+<tr class="separator:a6b92fb6d4b19f20b21d4ba2a5a8843ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a337c556fc7cd743c67b9a25d79cc2790"><td class="memItemLeft" align="right" valign="top"><a id="a337c556fc7cd743c67b9a25d79cc2790"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>setrange</b> (QString key, int offset, QString value)</td></tr>
+<tr class="separator:a337c556fc7cd743c67b9a25d79cc2790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad337da93b835012f431cb80cdd38bebd"><td class="memItemLeft" align="right" valign="top"><a id="ad337da93b835012f431cb80cdd38bebd"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>sort</b> (QString key, QString conditions)</td></tr>
+<tr class="separator:ad337da93b835012f431cb80cdd38bebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afddd007a75c636c28163f3769ec03d6e"><td class="memItemLeft" align="right" valign="top"><a id="afddd007a75c636c28163f3769ec03d6e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ttl</b> (QString key)</td></tr>
+<tr class="separator:afddd007a75c636c28163f3769ec03d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabc0e60c4aa77087f693ad5722a6f8eb"><td class="memItemLeft" align="right" valign="top"><a id="aabc0e60c4aa77087f693ad5722a6f8eb"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> (QString key)</td></tr>
+<tr class="separator:aabc0e60c4aa77087f693ad5722a6f8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d4a46d284677dfaf78e3c2ff6017b3b"><td class="memItemLeft" align="right" valign="top"><a id="a6d4a46d284677dfaf78e3c2ff6017b3b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>connectHost</b> (const QString &amp;host, const quint16 port=6379)</td></tr>
+<tr class="separator:a6d4a46d284677dfaf78e3c2ff6017b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762c039e92208bd36273b286780129ad"><td class="memItemLeft" align="right" valign="top"><a id="a762c039e92208bd36273b286780129ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnectHost</b> ()</td></tr>
+<tr class="separator:a762c039e92208bd36273b286780129ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="redis__core_8h_source.html">redis_core.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

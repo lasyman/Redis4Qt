@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Redis4Qt: RedisReader类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="redis.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Redis4Qt
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">Redis API for Qt framework</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Public 槽</a> &#124;
+<a href="#signals">信号</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_redis_reader-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">RedisReader类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 RedisReader 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_redis_reader.png" usemap="#RedisReader_map" alt=""/>
+  <map id="RedisReader_map" name="RedisReader_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public 槽</h2></td></tr>
+<tr class="memitem:aab595309bf3f94abc890172a18159a91"><td class="memItemLeft" align="right" valign="top"><a id="aab595309bf3f94abc890172a18159a91"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>socketConnected</b> ()</td></tr>
+<tr class="separator:aab595309bf3f94abc890172a18159a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1128a780bdb9f83cedac62fd725fdb"><td class="memItemLeft" align="right" valign="top"><a id="abc1128a780bdb9f83cedac62fd725fdb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>socketConnectionClosed</b> ()</td></tr>
+<tr class="separator:abc1128a780bdb9f83cedac62fd725fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63cb031462c538a7623c75736912e22"><td class="memItemLeft" align="right" valign="top"><a id="aa63cb031462c538a7623c75736912e22"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>socketReadyRead</b> ()</td></tr>
+<tr class="separator:aa63cb031462c538a7623c75736912e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ffc4f2ea976a80c4036e37b446988a1"><td class="memItemLeft" align="right" valign="top"><a id="a5ffc4f2ea976a80c4036e37b446988a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>socketError</b> (QAbstractSocket::SocketError)</td></tr>
+<tr class="separator:a5ffc4f2ea976a80c4036e37b446988a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa281f3b89c107d850f1ebeb1537a7562"><td class="memItemLeft" align="right" valign="top"><a id="aa281f3b89c107d850f1ebeb1537a7562"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sendData</b> (const QString &amp;)</td></tr>
+<tr class="separator:aa281f3b89c107d850f1ebeb1537a7562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c3c39e93348e264ebde98066958072"><td class="memItemLeft" align="right" valign="top"><a id="a03c3c39e93348e264ebde98066958072"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>readLine</b> (const QString &amp;)</td></tr>
+<tr class="separator:a03c3c39e93348e264ebde98066958072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+信号</h2></td></tr>
+<tr class="memitem:a35201a17d19c239a91e3c6f9ee414130"><td class="memItemLeft" align="right" valign="top"><a id="a35201a17d19c239a91e3c6f9ee414130"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>response</b> (QVariant)</td></tr>
+<tr class="separator:a35201a17d19c239a91e3c6f9ee414130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e71ec201593276658627ca29b6f40f"><td class="memItemLeft" align="right" valign="top"><a id="a07e71ec201593276658627ca29b6f40f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>connected</b> ()</td></tr>
+<tr class="separator:a07e71ec201593276658627ca29b6f40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeabac862aa5d0910b440ec996383bf59"><td class="memItemLeft" align="right" valign="top"><a id="aeabac862aa5d0910b440ec996383bf59"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnected</b> ()</td></tr>
+<tr class="separator:aeabac862aa5d0910b440ec996383bf59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1187c7e856d28418feebc4424ec53f7b"><td class="memItemLeft" align="right" valign="top"><a id="a1187c7e856d28418feebc4424ec53f7b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (QAbstractSocket::SocketError)</td></tr>
+<tr class="separator:a1187c7e856d28418feebc4424ec53f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a94479b4e0a555eb1dfe8778dd8ba9618"><td class="memItemLeft" align="right" valign="top"><a id="a94479b4e0a555eb1dfe8778dd8ba9618"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RedisReader</b> (QString host, int port, QObject *parent=0)</td></tr>
+<tr class="separator:a94479b4e0a555eb1dfe8778dd8ba9618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263569ab71b470ce4e440116d538fb36"><td class="memItemLeft" align="right" valign="top"><a id="a263569ab71b470ce4e440116d538fb36"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>connectHost</b> (const QString &amp;host, quint16 port)</td></tr>
+<tr class="separator:a263569ab71b470ce4e440116d538fb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2a475613d87e95c071a16fd3eb1f0c"><td class="memItemLeft" align="right" valign="top"><a id="acd2a475613d87e95c071a16fd3eb1f0c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConnected</b> () const</td></tr>
+<tr class="separator:acd2a475613d87e95c071a16fd3eb1f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9924bf842c4a463accc38cd735764bf"><td class="memItemLeft" align="right" valign="top"><a id="af9924bf842c4a463accc38cd735764bf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnectHost</b> ()</td></tr>
+<tr class="separator:af9924bf842c4a463accc38cd735764bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="redis__reader_8h_source.html">redis_reader.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
