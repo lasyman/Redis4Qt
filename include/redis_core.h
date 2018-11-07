@@ -7,8 +7,9 @@
 
 #include "redis_reader.h"
 #include "redis_errors.h"
+#include "redis_types.h"
 
-#define DEAFULT_REDIS_CMD_TIMEOUT 3
+using namespace Redis4Qt_Types;
 
 class RedisCore : public QObject
 {
@@ -16,14 +17,6 @@ class RedisCore : public QObject
 public:
     explicit RedisCore(QString host, int port, QObject *parent = 0);
     ~RedisCore();
-
-    typedef struct Reply {
-        QString type;
-        QString message;
-        QString pattern;
-        QString channel;
-        QVariant value;
-    } Reply;
 
     bool openConnection();
     bool closeConnection();

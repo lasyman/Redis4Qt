@@ -673,21 +673,21 @@ public:
      * @param message 需要发布的消息
      * @param error 是否发生错误
      */
-    void publish(QString channel, QString message, bool *error = NULL);
+    int publish(QString channel, QString message, bool *error = NULL);
 
     /**
      * @brief 订阅给定的一个或多个频道的信息
      * @param channel 通道名称
      * @param error 是否发生错误
      */
-    void subscribe(QString channel, bool *error = NULL);
+    int subscribe(QString channel, bool *error = NULL);
 
     /**
      * @brief 退订给定的一个或多个频道的信息
      * @param channel 通道名称
      * @param error 是否发生错误
      */
-    void unsubscribe(QString channel, bool *error = NULL);
+    int unsubscribe(QString channel, bool *error = NULL);
 
     /**
      * @brief 订阅一个或多个符合给定模式的频道。每个模式以 * 作为匹配符，比如 it* 匹配所有以 it 开头的频道( it.news 、 it.blog 、 it.tweets 等等)。
@@ -695,14 +695,14 @@ public:
      * @param channel 通道名称
      * @param error 是否发生错误
      */
-    void psubscribe(QString channel, bool *error = NULL);
+    int psubscribe(QString channel, bool *error = NULL);
 
     /**
      * @brief 退订所有给定模式的频道
      * @param channel 通道名称
      * @param error 是否发生错误
      */
-    void punsubscribe(QString channel, bool *error = NULL);
+    int punsubscribe(QString channel, bool *error = NULL);
 
 	/**
      * @brief 调用接口发生错误时，获取错误类型

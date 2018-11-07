@@ -4,6 +4,7 @@
 #include <QObject>
 
 #include "redis_types.h"
+#include "redis_core.h"
 #include <QObject>
 #include <QMutex>
 #include <QSettings>
@@ -20,8 +21,9 @@ struct ThreadRedis
 };
 
 class Redis4Qt;
-class Redis4QtPrivate
+class Redis4QtPrivate : public QObject
 {
+    Q_OBJECT
 public:
     Redis4QtPrivate(Redis4Qt *parent);
     void setRedisCof(QString strCfg);
@@ -95,11 +97,11 @@ public:
     bool hset(QString key, QString field, QString value, bool *error = NULL);
     bool hsetnx(QString key, QString field, QString value, bool *error = NULL);
     QStringList hvals(QString key, bool *error = NULL);
-    void publish(QString channel, QString message, bool *error = NULL);
-    void subscribe(QString channel, bool *error = NULL);
-    void unsubscribe(QString channel, bool *error = NULL);
-    void psubscribe(QString channel, bool *error = NULL);
-    void punsubscribe(QString channel, bool *error = NULL);
+    int publish(QString channel, QString message, bool *error = NULL);
+    int subscribe(QString channel, bool *error = NULL);
+    int unsubscribe(QString channel, bool *error = NULL);
+    int psubscribe(QString channel, bool *error = NULL);
+    int punsubscribe(QString channel, bool *error = NULL);
     int getLastError();
 
 private:
@@ -109,6 +111,12 @@ private:
     void setLastError(int error);
     QVariant dealwithCmd(FuncType type, QVariantList &data, bool *error);
     QVariant excuteCmd(FuncType type, RedisCore* redis, QVariantList &data);
+
+signals:
+    void sigReturnMsg(const QString &channel, const QString &msg);
+
+protected slots:
+    void onReturnData(Reply reply);
 
 private:
     friend class Redis4Qt;

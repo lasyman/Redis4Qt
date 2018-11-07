@@ -21,7 +21,7 @@ http://www.runoob.com/redis/redis-data-types.html
 
 1、ZSet有序集合
 
-2、订阅发布功能
+2、~~订阅发布功能~~
 
 3、事务功能
 

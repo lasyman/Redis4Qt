@@ -173,7 +173,7 @@ void RedisCore::response(QVariant response)
     }
 }
 
-RedisCore::Reply RedisCore::command(QString cmd)
+Reply RedisCore::command(QString cmd)
 {
     m_hasReply = false;
     Reply reply;

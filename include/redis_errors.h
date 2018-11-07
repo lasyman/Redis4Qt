@@ -8,6 +8,7 @@
 #define REDIS_TIMEOUT                    403     //redis命令超时
 #define REDIS_INVALID_KEY                404     //无效的key
 #define REDIS_RUNNING                    405     //当前线程正在执行redis命令，稍后再试
+#define DEAFULT_REDIS_CMD_TIMEOUT 3
 
 #define INVALID_INTEGER (-1)
 #define INVALID_FLOAT   (-1.0)

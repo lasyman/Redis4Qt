@@ -26,7 +26,7 @@ void Example::funcTest()
     m_redis = new Redis4Qt();
     m_redis->setRedisCof(m_strCfgFile);
 
-    qDebug() << m_redis->key_exists("lht:render:update:R-119");
+    qDebug() << m_redis->key_exists("RTest");
     m_redis->set_add("RTest", "test");
     qDebug() << m_redis->set_members("RTest");
     m_redis->string_set("string", "string");
@@ -39,6 +39,9 @@ void Example::funcTest()
     qDebug() << m_redis->hash_mset("test", data, &error);
     qDebug() << error;
     qDebug() << m_redis->hash_mget("test", QStringList() << "a" << "d");
+
+    m_redis->subscribe("topic");
+    qDebug() << error;
 }
 
 void Example::threadAddStringValue()

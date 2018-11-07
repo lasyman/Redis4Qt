@@ -438,31 +438,31 @@ QStringList Redis4Qt::hash_values(QString key, bool *error)
     return d->hvals(key, error);
 }
 
-void Redis4Qt::publish(QString channel, QString message, bool *error)
+int Redis4Qt::publish(QString channel, QString message, bool *error)
 {
     Q_D(Redis4Qt);
     return d->publish(channel, message, error);
 }
 
-void Redis4Qt::subscribe(QString channel, bool *error)
+int Redis4Qt::subscribe(QString channel, bool *error)
 {
     Q_D(Redis4Qt);
     return d->subscribe(channel, error);
 }
 
-void Redis4Qt::unsubscribe(QString channel, bool *error)
+int Redis4Qt::unsubscribe(QString channel, bool *error)
 {
     Q_D(Redis4Qt);
     return d->unsubscribe(channel, error);
 }
 
-void Redis4Qt::psubscribe(QString channel, bool *error)
+int Redis4Qt::psubscribe(QString channel, bool *error)
 {
     Q_D(Redis4Qt);
     return d->psubscribe(channel, error);
 }
 
-void Redis4Qt::punsubscribe(QString channel, bool *error)
+int Redis4Qt::punsubscribe(QString channel, bool *error)
 {
     Q_D(Redis4Qt);
     return d->punsubscribe(channel, error);

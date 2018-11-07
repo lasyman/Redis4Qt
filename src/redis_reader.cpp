@@ -211,56 +211,24 @@ void RedisReader::readLine(const QString &reply)
 
     } else if(first=='*')
     {
-        int index=replyData.indexOf("\r\n");
-        int count=replyData.mid(1,index-1)
-                .toInt();
-        if(index==-1)
-        {
-            qDebug()<<QString("StringList need more data! Cannot find $ Num end!");
-            hasMoreData = true;
-            return;
-        }
+        int index=reply.indexOf("\r\n");
+        int count=reply.mid(1,index-1)
+                       .toInt();
         int i;
         int len;
         int pos=index+2;
         result << "list";
 
-        if(count<1)
-        {
-            result <<"";
-        }
-
         for(i=0;i<count;i++)
         {
-            index=replyData.indexOf("\r\n",pos);
-            if(index == -1)
-            {
-                qDebug()<<QString("List need more data! Current count %1 cannot find \r\n!")
-                          .arg(count);
-                hasMoreData = true;
-                return;
-            }
-            len=replyData.mid(pos+1,index-pos-1)
-                    .toInt();
-            QString value;
-            if(len <= 0)
-            {
-                value = "NULL";
-            }
+            index=reply.indexOf("\r\n",pos);
+            len=reply.mid(pos+1,index-pos-1)
+                     .toInt();
+            if(len==-1)
+                result<<"NULL";
             else
-            {
-                value = replyData.mid(index+2,len+2);
+                result<<reply.mid(index+2,len);
 
-                if(value.size() < len+2)
-                {
-                    qDebug()<<QString("List need more data! Current count %1 need len %2, only %3 reply!")
-                              .arg(count).arg(len).arg(value.size());
-                    hasMoreData = true;
-                    return;
-                }
-                value.chop(2);
-            }
-            result<<value;
             pos=index+2+len+2;
         }
     }

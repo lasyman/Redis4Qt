@@ -12,6 +12,14 @@
 
 namespace Redis4Qt_Types
 {
+    typedef struct Reply {
+        QString type;
+        QString message;
+        QString pattern;
+        QString channel;
+        QVariant value;
+    } Reply;
+
     enum FuncType
     {
         //<1> key操作
@@ -107,9 +115,13 @@ public:
      * @param strsection 节点
      * @param strKey     键
      * @param strCfgFile 配置文件
+     * @param defaultValue 默认值
      * @return 值
      */
-    static QString getValue(const QString &strsection, const QString &strKey, const QString &strCfgFile);
+    static QString getValue(const QString &strsection,
+                            const QString &strKey,
+                            const QString &strCfgFile,
+                            const QVariant &defaultValue = QVariant());
     /**
      * @brief setValue 设置某个键值
      * @param strsection 节点

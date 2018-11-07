@@ -13,9 +13,9 @@ Redis4QtPrivate::Redis4QtPrivate(Redis4Qt *parent)
 
 void Redis4QtPrivate::setRedisCof(QString strCfg)
 {
-    m_redisHost = Redis4QtCommon::getValue(DEFAULT_SECTION, KEY_HOST, strCfg);
-    m_redisPort = Redis4QtCommon::getValue(DEFAULT_SECTION, KEY_PORT, strCfg).toInt();
-    m_redisCmdTimeout = Redis4QtCommon::getValue(DEFAULT_SECTION, KEY_TIMEOUT, strCfg).toInt();
+    m_redisHost = Redis4QtCommon::getValue(DEFAULT_SECTION, KEY_HOST, strCfg, "127.0.0.1");
+    m_redisPort = Redis4QtCommon::getValue(DEFAULT_SECTION, KEY_PORT, strCfg, 6379).toInt();
+    m_redisCmdTimeout = Redis4QtCommon::getValue(DEFAULT_SECTION, KEY_TIMEOUT, strCfg, DEAFULT_REDIS_CMD_TIMEOUT).toInt();
 }
 
 int Redis4QtPrivate::del(QString key, bool *error)
@@ -1132,29 +1132,50 @@ QStringList Redis4QtPrivate::hvals(QString key, bool *error)
     return ret.toStringList();
 }
 
-void Redis4QtPrivate::publish(QString channel, QString message, bool *error)
+int Redis4QtPrivate::publish(QString channel, QString message, bool *error)
 {
-    //TODO
+    // 执行redis指令
+    QVariantList data;
+    data.append(channel);
+    data.append(message);
+    QVariant ret = dealwithCmd(PUBLISH, data, error);
+    return ret.toInt();
 }
 
-void Redis4QtPrivate::subscribe(QString channel, bool *error)
+int Redis4QtPrivate::subscribe(QString channel, bool *error)
 {
-    //TODO
+    // 执行redis指令
+    QVariantList data;
+    data.append(channel);
+    QVariant ret = dealwithCmd(SUBSCRIBE, data, error);
+    return ret.toInt();
 }
 
-void Redis4QtPrivate::unsubscribe(QString channel, bool *error)
+int Redis4QtPrivate::unsubscribe(QString channel, bool *error)
 {
-    //TODO
+    // 执行redis指令
+    QVariantList data;
+    data.append(channel);
+    QVariant ret = dealwithCmd(UNSUBSCRIBE, data, error);
+    return ret.toInt();
 }
 
-void Redis4QtPrivate::psubscribe(QString channel, bool *error)
+int Redis4QtPrivate::psubscribe(QString channel, bool *error)
 {
-    //TODO
+    // 执行redis指令
+    QVariantList data;
+    data.append(channel);
+    QVariant ret = dealwithCmd(PSUBSCRIBE, data, error);
+    return ret.toInt();
 }
 
-void Redis4QtPrivate::punsubscribe(QString channel, bool *error)
+int Redis4QtPrivate::punsubscribe(QString channel, bool *error)
 {
-    //TODO
+    // 执行redis指令
+    QVariantList data;
+    data.append(channel);
+    QVariant ret = dealwithCmd(PUNSUBSCRIBE, data, error);
+    return ret.toInt();
 }
 
 int Redis4QtPrivate::getLastError()
@@ -1183,6 +1204,7 @@ RedisCore *Redis4QtPrivate::getRedisInstance()
     else
     {
         core = new RedisCore(m_redisHost, m_redisPort);
+        connect(core, SIGNAL(returnData(Reply)), this, SLOT(onReturnData(Reply)));
         core->setTimeout(m_redisCmdTimeout);
         ThreadRedis redis;
         redis.core = core;
@@ -1344,7 +1366,7 @@ QVariant Redis4QtPrivate::excuteCmd(FuncType type, RedisCore *redis, QVariantLis
         break;
     }
 
-        //<2> string操作
+    //<2> string操作
     case STRING_SET:
     {
         ret = redis->set(data[0].toString(), data[1].toString());
@@ -1396,7 +1418,7 @@ QVariant Redis4QtPrivate::excuteCmd(FuncType type, RedisCore *redis, QVariantLis
         break;
     }
 
-        //<3> list操作
+    //<3> list操作
     case LIST_BLPOP:
     {
         ret =  redis->blpop(data[0].toString(), data[1].toInt());
@@ -1483,7 +1505,7 @@ QVariant Redis4QtPrivate::excuteCmd(FuncType type, RedisCore *redis, QVariantLis
         break;
     }
 
-        //<4> set操作
+    //<4> set操作
     case SET_ADD:
     {
         ret = redis->sadd(data[0].toString(), data[1].toStringList());
@@ -1555,7 +1577,7 @@ QVariant Redis4QtPrivate::excuteCmd(FuncType type, RedisCore *redis, QVariantLis
         break;
     }
 
-        //<5> hash操作
+    //<5> hash操作
     case HASH_DEL:
     {
         ret = redis->hdel(data[0].toString(), data[1].toStringList());
@@ -1621,6 +1643,37 @@ QVariant Redis4QtPrivate::excuteCmd(FuncType type, RedisCore *redis, QVariantLis
         ret = redis->hvals(data[0].toString());
         break;
     }
+    // <6> 订阅发布
+    case PUBLISH:
+    {
+        redis->publish(data[0].toString(), data[1].toString());
+        ret = REDIS_SUCCESS;
+        break;
+    }
+    case SUBSCRIBE:
+    {
+        redis->subscribe(data[0].toString());
+        ret = REDIS_SUCCESS;
+        break;
+    }
+    case UNSUBSCRIBE:
+    {
+        redis->unsubscribe(data[0].toString());
+        ret = REDIS_SUCCESS;
+        break;
+    }
+    case PSUBSCRIBE:
+    {
+        redis->psubscribe(data[0].toString());
+        ret = REDIS_SUCCESS;
+        break;
+    }
+    case PUNSUBSCRIBE:
+    {
+        redis->punsubscribe(data[0].toString());
+        ret = REDIS_SUCCESS;
+        break;
+    }
     default:
     {
         qDebug() << (QString("Not support func [%1]!").arg(type));
@@ -1630,5 +1683,12 @@ QVariant Redis4QtPrivate::excuteCmd(FuncType type, RedisCore *redis, QVariantLis
     }
     m_redis[QThread::currentThread()].lock->unlock();
     return ret;
+}
+
+void Redis4QtPrivate::onReturnData(Reply reply)
+{
+    qDebug() << "channel: " << reply.channel << " pattern: " << reply.pattern;
+    qDebug() << reply.value.toString();
+    emit sigReturnMsg(reply.channel, reply.value.toString());
 }
 
