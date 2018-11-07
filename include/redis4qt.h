@@ -2,23 +2,9 @@
 #define REDIS4QT_H
 
 #include "redis4qt_global.h"
-#include "redis_types.h"
 #include <QObject>
-#include <QMutex>
-#include <QSettings>
 
-using namespace Redis4Qt_Types;
-
-class RedisCore;
-class QTimer;
-
-struct ThreadRedis
-{
-    QMutex*      lock;
-    QThread*     thread;
-    RedisCore* core;
-};
-
+class Redis4QtPrivate;
 class REDIS4QTAPI Redis4Qt : public QObject
 {
     Q_OBJECT
@@ -725,20 +711,9 @@ public:
     int getLastError();
 
 private:
-    RedisCore *getRedisInstance();
-    bool validKey(QString &key, QString funcName, bool *error);
-    bool validKeys(QStringList &key, QString funcName, bool *error);
-    void setLastError(int error);
-    QVariant dealwithCmd(FuncType type, QVariantList &data, bool *error);
-    QVariant excuteCmd(FuncType type, RedisCore* redis, QVariantList &data);
-
-private:
-    QString                 m_redisHost;
-    qint16                  m_redisPort;
-    int                     m_redisCmdTimeout;
-    QMap<void *, ThreadRedis>  m_redis;
-    QSettings    *m_Settings;
-    QMutex                  m_Lock;
+    Redis4QtPrivate *d_ptr;
+    Q_DECLARE_PRIVATE(Redis4Qt)
+    Q_DISABLE_COPY(Redis4Qt)
 };
 
 #endif // REDIS4QT_H

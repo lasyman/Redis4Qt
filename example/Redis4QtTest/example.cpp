@@ -8,8 +8,12 @@ Example::Example(QObject *parent)
     : QObject(parent)
 {
     m_strCfgFile = QApplication::applicationDirPath() + "/redis.ini";
+#if 0
     QtConcurrent::run(this, &Example::threadAddStringValue);
     QtConcurrent::run(this, &Example::threadReadStringValues);
+#else
+    funcTest();
+#endif
 }
 
 Example::~Example()
@@ -26,6 +30,15 @@ void Example::funcTest()
     m_redis->set_add("RTest", "test");
     qDebug() << m_redis->set_members("RTest");
     m_redis->string_set("string", "string");
+    QVariantMap data;
+    data.insert("a", 1);
+    data.insert("b", true);
+    data.insert("c", "string");
+    data.insert("d", 0.01);
+    bool error;
+    qDebug() << m_redis->hash_mset("test", data, &error);
+    qDebug() << error;
+    qDebug() << m_redis->hash_mget("test", QStringList() << "a" << "d");
 }
 
 void Example::threadAddStringValue()
@@ -37,6 +50,7 @@ void Example::threadAddStringValue()
     while (true)
     {
         redis->string_append("string", QString::number(i));
+        qDebug() << "append: " << i;
         i++;
         QThread::msleep(1000);
     }
@@ -50,7 +64,7 @@ void Example::threadReadStringValues()
     redis->setRedisCof(strCfgFile);
     while (true)
     {
-        qDebug() << redis->string_get("string");
+        qDebug() << "get: " << redis->string_get("string");
         QThread::msleep(1000);
     }
 }
