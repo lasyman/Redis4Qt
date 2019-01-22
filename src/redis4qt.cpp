@@ -9,7 +9,7 @@ Redis4Qt::Redis4Qt()
 
 Redis4Qt::~Redis4Qt()
 {
-
+    delete d_ptr;
 }
 
 void Redis4Qt::setRedisCof(QString strCfg)
